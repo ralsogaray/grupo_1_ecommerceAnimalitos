@@ -1,6 +1,6 @@
 # TEMÁTICA
-- Descripción: e-commerce destinado a la compra de alimento y accesiorios para perros y gatos domésticos. Asimismo, se ofrecerá servicios de guardería, peluquería y de paseadores para dichos animales.
-- Público: toda persona que desee adquirir un producto o servicio ofrecido para sí o para terceros relacionado a animales domésticos. 
+- Descripción: E-commerce destinado a la compra de alimento y accesorios para perros y gatos domésticos. Asimismo, se ofrecerá servicios de guardería, peluquería y de paseadores para dichos animales.
+- Público: Toda persona que desee adquirir un producto o servicio ofrecido para sí o para terceros relacionado a perros y gatos domésticos. 
 
 # INTEGRANTES DEL EQUIPO DE DESARROLLO
 
@@ -9,26 +9,25 @@ nombre: Verónica Tarulla
 edad: 31
 profesión: Licenciada en Gestión Hotelera
 
-
 - Integrante II
 nombre: Gastón Cantero
 edad: 25
-profesión: profesor de inglés
+profesión: Profesor de inglés
 
 - Integrante III
-nombre: Lucas Tollino
+nombre: Lucas Tolino
 edad: 33
-profesión: médico
+profesión: Médico
 
 - Integrante IV
 nombre: Patricio Solari
 edad: 33
-profesión: licenciado en administración de empresas
+profesión: Licenciado en administración de empresas
 
 - Integrante V:
 nombre: Rodrigo Luis Alsogaray
 edad: 30
-profesión: abogado, pastelero y crypto enthusiastic
+profesión: Abogado, Pastelero y Crypto enthusiastic
 
 - Ingtegrante VI:
 nombre: Francisco Falcón Berruchi
