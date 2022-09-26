@@ -30,7 +30,3 @@ nombre: Rodrigo Luis Alsogaray
 edad: 30
 profesión: abogado, pastelero y crypto enthusiastic
 
-- Ingtegrante VI:
-nombre: Francisco Falcón Berruchi
-edad:
-profesión: 
