@@ -29,3 +29,13 @@ nombre: Rodrigo Luis Alsogaray
 edad: 30
 profesión: Abogado, Pastelero y Crypto enthusiastic
 
+# Sitios de Referencia
+
+- Se seleccionaron los sitios abajo mencionados debido a que presentan productos y servicios similares a los que se enfoca nuestro E-commerce, ademas por la funcionalidad y estetica en la cual nos inspiramos para la realizacion de nuestros wireframes.
+
+- https://www.petitpetshop.com.ar/
+- https://www.puppis.com.ar/
+- https://petfood.com.ar
+- https://mispichos.com/#navbar
+- https://www.natural-life.com.ar/
+
