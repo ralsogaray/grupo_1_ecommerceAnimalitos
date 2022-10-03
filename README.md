@@ -39,3 +39,5 @@ profesión: Abogado, Pastelero y Crypto enthusiastic
 - https://mispichos.com/#navbar
 - https://www.natural-life.com.ar/
 
+# PLATAFORMA PARA ORGANIZAR EL TRABAJO EN EQUIPO
+- https://trello.com/u/rodrigoalsogaray/boards
