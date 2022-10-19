@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto&display=swap');
+
+body{
+    background-color: rgb(250 255 234);
+}
+
+.header, .footer{
+    background-color: rgb(136 250 224);
+}
+
+.logoRedes{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
