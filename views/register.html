@@ -12,18 +12,39 @@
 </head>
 <body>
 <header class="header">
-    <nav>
-        <ul>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Perros</a></li>
-            <li><a href="">Gatos</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="headerTop">
+        <div class="burguerButton">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div>
+            Logo
+        </div>
+        <div class="iconContainer">
+            <div class="truckIcon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="userIcon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cartIcon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    </div>
+    <div class="headerBottom">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Perros</a></li>
+                <li><a href="">Gatos</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
     <main>
-        <h3 class="titulo">Registrate</h3>
+        <h3 class="titulo">REGISTRATE</h3>
         <form method="post" action="/" class="formRegistro">
             <div>
                 <label for="fullName" class="labelForm">Nombre y Apellido</label>
@@ -58,13 +79,12 @@
                 <input type="password" class="inputRegistro" name="confirmPass" id="confirmPass" placeholder="Reingresa tu contraseña">
             </div>
             <div class="buttonContainer">
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpiar Formulario</button>
+                <button type="submit">Registrate</button>
             </div>
         </form>
     </main>
 <footer class="footer">
-    <div>
+    <div class="socialMedia">
         <a href="https://www.whatsapp.com"><img class="logoRedes" src="/images/logoWhatsapp.png" alt="logo wtsp"></a>
         <a href="https://www.instagram.com"><img class="logoRedes" src="/images/logoIg.png" alt="logo ig"></a>
         <a href="https://www.twitter.com"><img class="logoRedes" src="/images/logoTwtr.png" alt="logo twtr"></a>

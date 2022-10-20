@@ -13,16 +13,141 @@ body{
     background-color: rgb(136 250 224);
 }
 
+
+/******** HEADER *********/
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.headerTop{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+.iconContainer{
+    display: flex;
+}
+.cartIcon{
+    margin-left: 10px;
+}
+
+.headerBottom{
+    display: none;
+}
+.truckIcon{
+    display: none;
+}
+
+
+/********FOOTER*******/
+.socialMedia{
+    display: flex;
+    justify-content: end;
+}
+
 .logoRedes{
     width: 30px;
     height: 30px;
     margin: 15px;
 }
-li{
-    list-style-type: none;
+
+/*******PAGINA REGISTRO*******/
+.formRegistro{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+.labelForm{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+    font-size: 16px;
+}
+.inputRegistro{
+    width: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.checkContainer{
+    display: flex;
+    flex-direction: column;
+}
+.checkRegistro{
+    color: #666;
+    margin-left: 20px;
+    padding: 7px;
+}
+.checkRegistro input{
+    margin-right: 5px;
+}
+.buttonContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+.buttonContainer button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 6px;
+    color: white;
+    background-color: #666;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: none;
+    transition: all 0.5s;
+}
+.buttonContainer button:hover{
+    background-color: #15c70f;
+    cursor: pointer;
+}
+.titulo{
+margin: 20px;
+text-align: center;
+}
+
+@media screen and (min-width: 576px){
+
+    /****** HEADER *******/
+
+    .truckIcon{
+        display: block;
+        margin-right: 10px;
+    }
+    .headerBottom{
+        display: block;
+    }
+    .burguerButton{
+        display: none;
+    }
+    nav{
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+    nav ul{
+        display: flex;
+
+    }
+    li{
+        width: 20%;
+        text-align: center;
+        border-left-style: solid;
+        border-left-width: 1px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 992px){
+
 }
