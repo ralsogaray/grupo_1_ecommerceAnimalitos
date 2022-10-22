@@ -1,12 +1,12 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:wght@300;400;500&display=swap');
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto&display=swap');
-
 body{
     background-color: rgb(250 255 234);
+    font-family: 'Roboto', sans-serif;
 }
 
 .header, .footer{
@@ -92,9 +92,28 @@ a{
 
 
 /********FOOTER*******/
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.datosContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    order: 2;
+}
+.contactoTitulo{
+    font-weight: bold;
+    display: inline;
+}
 .socialMedia{
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    order: 1;
 }
 
 .logoRedes{
@@ -102,7 +121,13 @@ a{
     height: 30px;
     margin: 15px;
 }
-
+.copy{
+    order: 3;
+    margin-bottom: 5px;
+}
+.copy p{
+    font-size: small;
+}
 /*******PAGINA REGISTRO*******/
 .formRegistro{
     width: 80%;
@@ -167,6 +192,12 @@ a{
 margin: 20px;
 text-align: center;
 }
+/******* PAGINA LOGIN ********/
+
+.register{
+    text-align: center;
+    margin: 25px;
+}
 
 @media screen and (min-width: 576px){
 
@@ -205,6 +236,39 @@ text-align: center;
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
+/******* FOOTER ********/
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.datosContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    order: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.copy{
+    order: 2;
+    margin-bottom: 5px;
+}
+.copy p{
+    text-align: end;
+}
+.socialMedia{
+    order: 3;
+}
 
 /****** PAGINA REGISTRO*******/
 
