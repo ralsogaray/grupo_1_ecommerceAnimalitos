@@ -41,3 +41,12 @@ profesión: Abogado, Pastelero y Crypto enthusiastic
 
 # PLATAFORMA PARA ORGANIZAR EL TRABAJO EN EQUIPO
 - https://trello.com/w/animalitosdg
+
+
+# Arrancando el servidor en localhost
+
+```terminal
+$ npm start
+```
+
+Ir a [http://localhost:3333](http://localhost:3333)

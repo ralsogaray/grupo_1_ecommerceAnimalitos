@@ -4,6 +4,7 @@
   "description": "- Descripción: E-commerce destinado a la compra de alimento y accesorios para perros y gatos domésticos. Asimismo, se ofrecerá servicios de guardería, peluquería y de paseadores para dichos animales.\r - Público: Toda persona que desee adquirir un producto o servicio ofrecido para sí o para terceros relacionado a perros y gatos domésticos.",
   "main": "index.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
