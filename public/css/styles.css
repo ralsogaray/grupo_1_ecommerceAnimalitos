@@ -192,6 +192,144 @@ a{
 margin: 20px;
 text-align: center;
 }
+/******* PAGINA DETAIL PRODUCT ********/
+
+.product-main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 15px;
+}
+.product-img {
+    width: 25%;
+    height: 25%;
+}
+.fa-magnifying-glass {
+    display: none;
+}
+.product-info-main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+}
+.product-info-main p {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.product-info h3 {
+    padding-bottom: 5px;
+}
+.product-info .price-product {
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.product-info {
+    padding-bottom: 10px;
+    border-bottom-style: groove;
+}
+.product-info-chart {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-style: groove;
+}
+.product-info-chart h4 {
+    padding-bottom: 5px;
+}
+.product-chart {
+    display: flex;
+    flex-direction: column;    
+}
+.product-chart input {
+    margin: 5px;
+    width: 25%;
+    height: 50px;
+    border-style: solid;
+    border-radius: 3px;
+    text-align: center;
+}
+.product-chart button i {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.product-chart div.add-chart button {
+    background-color: rgb(27, 56, 172);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    align-self: center;
+    margin: 5px;
+    transition: 0.5s;
+}
+.product-chart div.add-chart button:hover {
+    cursor: pointer;
+    background-color: rgb(53, 137, 198);
+}
+.product-chart .fa-heart:hover {
+    color: rgb(185, 38, 38);
+}
+.product-chart .fa-shuffle:hover {
+    color: rgb(185, 38, 38);
+    rotate: 180°;
+}
+.product-payment {
+    border-bottom-style: groove;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.product-payment i {
+    color: #666;
+}
+.product-payment img {
+    padding: 10px;
+}
+.product-shipping {
+    border-bottom-style: groove;
+    padding-bottom: 20px; 
+    display: inline-flex;  
+    flex-direction: column; 
+    justify-content: center;
+    align-items: left;
+}
+.product-shipping i {
+    color: #666;
+}
+.product-socialMedia {
+    border-bottom-style: groove;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.product-socialMedia p {
+    font-size: 0.7rem;
+}
+.product-socialMedia img {
+    max-width: 50%;
+}
+.product-description {
+    padding: 15px;
+}
+.product-description p {
+    text-align: left;
+    font-size: 0.7rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+.product-description h4 {
+    border-bottom-style: groove;
+    padding-bottom: 10px;
+}
+
+
 /******* PAGINA LOGIN ********/
 
 .register{
@@ -278,5 +416,21 @@ text-align: center;
 }
 
 @media screen and (min-width: 992px){
+    .product-main {
+        display: flex;
+        flex-direction: row;
+    }
+    .product-img, .fa-magnifying-glass {
+        justify-content: center;
+        background-color: white;
+        margin: auto;        
+    }
+    .fa-magnifying-glass {
+        display: flex;
+    }
+    .product-info-main {
+        margin: 10px 25px;
+        padding: 15px;
+    }
 
 }
