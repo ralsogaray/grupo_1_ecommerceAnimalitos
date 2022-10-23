@@ -330,6 +330,182 @@ text-align: center;
 }
 
 
+/********   INDEX *******/
+
+/* CARROUSEL*/
+#imagen-carrousel{
+    width: 100%;
+    margin-bottom: 3rem;
+    box-shadow: -2px 6px 17px -1px rgba(196,196,196,0.75);
+    -webkit-box-shadow: -2px 6px 17px -1px rgba(196,196,196,0.75);
+    -moz-box-shadow: -2px 6px 17px -1px rgba(196,196,196,0.75);
+}
+/* ----- */
+
+/* MEDIOS DE PAGO */
+#home-medios-de-pago{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+    padding: 0;
+    margin: auto;
+    border: solid rgb(146, 146, 146) 2px;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    -webkit-box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    -moz-box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+}
+
+#home-medios-de-pago article{
+    padding: 1rem;
+    width: 100%;
+}
+
+#article-medios-pago-paraBorde{
+    border-bottom: dotted 1px rgb(146, 146, 146);
+}
+
+#home-medios-de-pago article a{
+    display: flex;
+    align-items: center;
+}
+
+#home-medios-de-pago article p{
+    margin-left: 0.7rem;
+}
+
+#home-medios-de-pago article i{
+    color: rgb(136 250 224);
+    border: solid 2px rgb(136 250 224);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* ------- */
+
+#section-productos-destacados{
+    margin: auto;
+    width: 80%;
+}
+
+#section-productos-destacados h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #7c7b7b;
+    margin-top: 3rem;
+    border-bottom: 1px solid grey;
+    
+}
+
+.cards-productos{
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-productos article{
+    width: 100%;
+    border: solid 2px grey;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px;
+    
+    margin-top: 2rem;
+
+    box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    -webkit-box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    -moz-box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.cards-productos article:hover{
+    box-shadow: 2px -2px 20px -1px rgba(14,247,247,0.75);
+    -webkit-box-shadow: 2px -2px 20px -1px rgba(14,247,247,0.75);
+    -moz-box-shadow: 2px -2px 20px -1px rgba(14,247,247,0.75);
+    
+}
+
+.imagen-producto-destacado{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cards-productos-informacion{
+    border-top: dotted 1px grey;
+    padding: 1rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.cards-precio-producto{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(5, 160, 5);
+    font-size: 2.5rem;
+}
+
+.cards-descripcion-producto{
+    font-size: 1.3rem;
+}
+
+#cards-boton-agregarAlCarrito{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cards-boton-agregarAlCarrito p{
+    display: inline-block;
+    margin: 0rem 1.5rem 1rem 0rem;
+    border: solid grey 2px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: white;
+    background: #42f0ff;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+#cards-boton-agregarAlCarrito p:hover{
+    background:  rgb(5, 160, 5);
+    cursor: pointer;
+}
+
+/* quienes somos index */
+
+.quienes-somos-main{
+    margin: 1.2rem 0rem 1.2rem 0rem;
+    background-image: url(/images/CAT\ AND\ DOG.jpeg);
+    background-size: cover;
+    /*opacity: 0.5;*/
+   /* background-attachment: fixed;*/
+
+   box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    -webkit-box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+    -moz-box-shadow: 2px -2px 20px -1px rgba(148,145,145,0.75);
+}
+
+.quienes-somos-main article{
+    padding: 0.5rem;
+    opacity: 1;
+}
+
+.quienes-somos-main article h4{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+#quienes-somos-div-logo-empresa{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
 /******* PAGINA LOGIN ********/
 
 .register{
