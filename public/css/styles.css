@@ -578,7 +578,6 @@ a {
 
 /******* PAGINA LOGIN ********/
 
-<<<<<<< HEAD
 
 .center{
     position: relative;
@@ -679,7 +678,6 @@ a {
   
   
 @media screen and (min-width: 576px){
-=======
 .register {
     text-align: center;
     margin: 25px;
@@ -856,7 +854,6 @@ a {
 
 
 @media screen and (min-width: 576px) {
->>>>>>> 7a26d6e6cf5a4d9c5f08759596e699a54a45d3e7
 
     /****** HEADER *******/
     i {
@@ -1043,4 +1040,5 @@ a {
         align-items: center;
     }
 
+}
 }
