@@ -50,23 +50,25 @@
         </div>
     </header>
         <main>
-            <h3 class="titulo">Ingresá a tu Cuenta</h3>
             <form method="post" action="/" class="formRegistro">
-                <div>
-                    <label class="labelForm" for="userNameLog">Email</label>
-                    <input type="email" class="inputRegistro" name="userNameLog" id="userNameLog" placeholder="Ingresa tu Nombre de usuario">
-                </div>
-                <div>
-                    <label class="labelForm" for="passwordLog">Contraseña</label>
-                    <input type="password" class="inputRegistro" name="passwordLog" id="passwordLog" placeholder="Ingresa tu contraseña">
-                </div>
-                <div class="buttonContainer">
-                    <button type="submit">Ingresá</button>
-                </div>
-            </form>
-            <div class="register">
-                <a href="/register"><h3>Si no tenés cuenta, registrate acá</h3></a>
-            </div>
+                <div class="text-field">
+                    <div><h3 class="center">Ingresá a tu Cuenta</h3></div>
+                    <input type="text" required>
+                    <span></span>
+                    <label>Usuario</label>
+                  </div>
+                  <div class="text-field">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Contraseña</label>
+                  </div>
+                  <div class="forget-pass-field">¿Olvidaste tu contraseña?</div>
+                  <input type="submit" value="Ingresá">
+                  <div class="signup-link">
+                   ¿No sos miembro? <a href="/register">¡Registrate!</a>
+                  </div>
+                </form>
+
         </main>
         <footer class="footer">
             <div class="footerTop">
