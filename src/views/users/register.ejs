@@ -1,54 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/logoPrueba.jpg">
-    <!--<link rel="stylesheet" href="/css/normalize.css">-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>ANIMALITOS</title>
-</head>
+<%- include('../partials/metadata.ejs') %> 
 <body>
-<header class="header">
-    <div class="headerTop">
-        <div class="burguerButton">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <form method="get" action="" class="barra-busqueda">
-            <input type="text" name="nombre" placeholder="Buscar productos, marcas">
-            <button type="submit" class="lupa">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <div class="logo">
-            <a href="/" class="logoHeader"><img src="/images/logo-sin-bg.png" class="logoHeader" alt="logo"></a>
-        </div>
-        <div class="iconContainer">
-            <div class="truckIcon">
-                <i class="fa-solid fa-truck-fast"></i>
-            </div>
-            <div class="userIcon">
-                <a href="/login"><i class="fa-solid fa-user"></i></a>
-            </div>
-            <div class="cartIcon">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-        </div>
-    </div>
-    <div class="headerBottom">
-        <nav>
-            <ul>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Perros</a></li>
-                <li><a href="">Gatos</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+
+
+    <%- include('../partials/header.ejs') %>
     <main>
         <h3 class="titulo">REGISTRATE</h3>
         <form method="post" action="/" class="formRegistro">
@@ -89,31 +43,6 @@
             </div>
         </form>
     </main>
-    <footer class="footer">
-        <div class="footerTop">
-            <div class="datosContacto">
-                <div>
-                    <span class="contactoTitulo">Atención Teléfonica:</span><span> 0810-220-2345</span>
-                </div>
-                <div>
-                    <span class="contactoTitulo">Atención Whatsapp:</span><span> +54-911-6702-6320</span>
-                </div>
-                <div>
-                    <span class="contactoTitulo">Horarios de Atención:</span><span> Lunes a Sábados de 9 a 21 hs</span>
-                </div>
-            </div>
-            <div class="socialMedia">
-                <a href="https://www.whatsapp.com"><img class="logoRedes" src="/images/logoWhatsapp.png" alt="logo wtsp"></a>
-                <a href="https://www.instagram.com"><img class="logoRedes" src="/images/logoIg.png" alt="logo ig"></a>
-                <a href="https://www.twitter.com"><img class="logoRedes" src="/images/logoTwtr.png" alt="logo twtr"></a>
-                <a href="https://www.facebook.com"><img class="logoRedes" src="/images/logoFace.png" alt="logo fb"></a>
-            </div>
-        </div>
-        <div class="footerBottom">
-            <div class="copy">
-                <p>Copyright © 2022 Animalitos S.A.</p>
-            </div>
-        </div>
-    </footer>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
