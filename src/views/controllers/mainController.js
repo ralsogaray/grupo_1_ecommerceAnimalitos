@@ -24,6 +24,15 @@ const renderProductDetail = (req,res) => {
 
 }
 
+const renderAddProduct = (req, res) =>{
+    return res.render(path.resolve('./src/views/users/addProduct.ejs'))
+}
+
 module.exports = {
-    renderHome, renderLogin,renderRegister,renderCart,renderProductDetail
+    renderHome, 
+    renderLogin,
+    renderRegister,
+    renderCart,
+    renderProductDetail, 
+    renderAddProduct
 }
