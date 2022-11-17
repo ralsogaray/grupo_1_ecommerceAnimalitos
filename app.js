@@ -3,6 +3,7 @@ const app = express();
 const APP_PORT = process.env.PORT || 3333;
 const path = require('path');
 const publicFolderPath = path.resolve('public');
+//<<<<<<< HEAD
 
 
 //routes required
@@ -14,12 +15,23 @@ const productDetail = require('./src/routers/productDetailRouter')
 const addProduct = require('./src/routers/addProductRouter')
 const modifyProduct = require('./src/routers/modifyProductRouter')
 
+const mainRouter = require ('./src/views/routers/mainRouter');
+//const methodOverride = require('method-override');
+//>>>>>>> aff53be8bea2c47599c24673164f3311363efcbd
+
 
 // find public resources
 app.use(express.static(publicFolderPath));
+//<<<<<<< HEAD
 
 
 // ejs 
+//=======
+//app.use(express.urlencoded({extended: false}));
+//app.use(express.json());
+//app.use(methodOverride('_method'));
+
+//>>>>>>> aff53be8bea2c47599c24673164f3311363efcbd
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
 //
