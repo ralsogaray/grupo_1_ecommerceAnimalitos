@@ -1,0 +1,72 @@
+[{
+    "id": 1,
+    "name": "Savanna baboon",
+    "description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec",
+    "brand": "Papio cynocephalus",
+    "category": "Category4",
+    "price": 11443.84
+  }, {
+    "id": 2,
+    "name": "Yellow-bellied marmot",
+    "description": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
+    "brand": "Marmota flaviventris",
+    "category": "Category2",
+    "price": 10213.15
+  }, {
+    "id": 3,
+    "name": "Wildebeest, blue",
+    "description": "nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse",
+    "brand": "Connochaetus taurinus",
+    "category": "Category2",
+    "price": 4958.12
+  }, {
+    "id": 4,
+    "name": "Heron, goliath",
+    "description": "scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis",
+    "brand": "Ardea golieth",
+    "category": "Category6",
+    "price": 5497.56
+  }, {
+    "id": 5,
+    "name": "Denham's bustard",
+    "description": "at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis",
+    "brand": "Neotis denhami",
+    "category": "Category5",
+    "price": 9163.33
+  }, {
+    "id": 6,
+    "name": "Eastern indigo snake",
+    "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus",
+    "brand": "Drymarchon corias couperi",
+    "category": "Category4",
+    "price": 8262.41
+  }, {
+    "id": 7,
+    "name": "Grouse, greater sage",
+    "description": "malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit",
+    "brand": "Centrocercus urophasianus",
+    "category": "Category1",
+    "price": 11980.47
+  }, {
+    "id": 8,
+    "name": "Vulture, griffon",
+    "description": "justo aliquam quis turpis eget elit sodales scelerisque mauris sit",
+    "brand": "Gyps fulvus",
+    "category": "Category2",
+    "price": 14970.95
+  }, {
+    "id": 9,
+    "name": "Royal tern",
+    "description": "ac nulla sed vel enim sit amet nunc viverra dapibus nulla",
+    "brand": "Thalasseus maximus",
+    "category": "Category3",
+    "price": 11487.97
+  }, {
+    "id": 10,
+    "name": "Horned rattlesnake",
+    "description": "integer pede justo lacinia eget tincidunt eget tempus vel pede",
+    "brand": "Crotalus cerastes",
+    "category": "Category1",
+    "price": 7681.78
+  }]
+  
