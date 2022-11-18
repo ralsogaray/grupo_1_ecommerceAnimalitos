@@ -1,72 +1,81 @@
 [{
     "id": 1,
-    "name": "Savanna baboon",
-    "description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec",
-    "brand": "Papio cynocephalus",
-    "category": "Category4",
-    "price": 11443.84
+    "name": "Owl, madagascar hawk",
+    "description": "ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam",
+    "brand": "Ninox superciliaris",
+    "category": "catFood",
+    "price": 13981.18,
+    "image": "PRODUCTS-dog-sweaterjpg"
   }, {
     "id": 2,
-    "name": "Yellow-bellied marmot",
-    "description": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
-    "brand": "Marmota flaviventris",
-    "category": "Category2",
-    "price": 10213.15
+    "name": "Dik, kirk's dik",
+    "description": "non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque",
+    "brand": "Madoqua kirkii",
+    "category": "dogFood",
+    "price": 7970.64,
+    "image": "PRODUCTS-dog-leash.jpg"
   }, {
     "id": 3,
-    "name": "Wildebeest, blue",
-    "description": "nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse",
-    "brand": "Connochaetus taurinus",
-    "category": "Category2",
-    "price": 4958.12
+    "name": "Feathertail glider",
+    "description": "ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac",
+    "brand": "Acrobates pygmaeus",
+    "category": "dogClothes",
+    "price": 12947.57,
+    "image": "PRODUCTS-generic-cat-food.png"
   }, {
     "id": 4,
-    "name": "Heron, goliath",
-    "description": "scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis",
-    "brand": "Ardea golieth",
-    "category": "Category6",
-    "price": 5497.56
+    "name": "Woodcock, american",
+    "description": "id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis",
+    "brand": "Scolopax minor",
+    "category": "catFood",
+    "price": 6364.33,
+    "image": "PRODUCTS-cat-hat.jpg"
   }, {
     "id": 5,
-    "name": "Denham's bustard",
-    "description": "at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis",
-    "brand": "Neotis denhami",
-    "category": "Category5",
-    "price": 9163.33
+    "name": "Fox, blue",
+    "description": "ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue",
+    "brand": "Alopex lagopus",
+    "category": "dogFood",
+    "price": 6464.67,
+    "image": "PRODUCTS-generic-cat-food.png"
   }, {
     "id": 6,
-    "name": "Eastern indigo snake",
-    "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus",
-    "brand": "Drymarchon corias couperi",
-    "category": "Category4",
-    "price": 8262.41
+    "name": "Southern boubou",
+    "description": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi",
+    "brand": "Laniarius ferrugineus",
+    "category": "catAccesory",
+    "price": 5370.11,
+    "image": "PRODUCTS-dog-leash.jpg"
   }, {
     "id": 7,
-    "name": "Grouse, greater sage",
-    "description": "malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit",
-    "brand": "Centrocercus urophasianus",
-    "category": "Category1",
-    "price": 11980.47
+    "name": "Greater rhea",
+    "description": "in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa",
+    "brand": "Rhea americana",
+    "category": "catAccesory",
+    "price": 11330.33,
+    "image": "PRODUCTS-generic-cat-food.png"
   }, {
     "id": 8,
-    "name": "Vulture, griffon",
-    "description": "justo aliquam quis turpis eget elit sodales scelerisque mauris sit",
-    "brand": "Gyps fulvus",
-    "category": "Category2",
-    "price": 14970.95
+    "name": "Bush dog",
+    "description": "morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt",
+    "brand": "Speothos vanaticus",
+    "category": "catFood",
+    "price": 13305.06,
+    "image": "PRODUCTS-dog-sweaterjpg"
   }, {
     "id": 9,
-    "name": "Royal tern",
-    "description": "ac nulla sed vel enim sit amet nunc viverra dapibus nulla",
-    "brand": "Thalasseus maximus",
-    "category": "Category3",
-    "price": 11487.97
+    "name": "Goat, mountain",
+    "description": "lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim",
+    "brand": "Oreamnos americanus",
+    "category": "catClothes",
+    "price": 4366.68,
+    "image": "PRODUCTS-generic-dog-food.png"
   }, {
     "id": 10,
-    "name": "Horned rattlesnake",
-    "description": "integer pede justo lacinia eget tincidunt eget tempus vel pede",
-    "brand": "Crotalus cerastes",
-    "category": "Category1",
-    "price": 7681.78
+    "name": "Osprey",
+    "description": "nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit",
+    "brand": "Pandon haliaetus",
+    "category": "catClothes",
+    "price": 6730.64,
+    "image": "PRODUCTS-generic-dog-food.png"
   }]
-  
