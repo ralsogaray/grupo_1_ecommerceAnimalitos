@@ -15,7 +15,7 @@ const productDetail = require('./src/routers/productDetailRouter')
 const addProduct = require('./src/routers/addProductRouter')
 const modifyProduct = require('./src/routers/modifyProductRouter')
 
-const mainRouter = require ('./src/views/routers/mainRouter');
+//const mainRouter = require ('./src/views/routers/mainRouter');
 //const methodOverride = require('method-override');
 //>>>>>>> aff53be8bea2c47599c24673164f3311363efcbd
 
