@@ -10,7 +10,7 @@ const mainRouter = require('./src/routers/mainRouter');
 const userLoginRouter = require('./src/routers/userLoginRouter');
 const userRegisterRouter = require('./src/routers/userRegisterRouter');
 const cartProducts = require('./src/routers/cartRouter')
-const productDetail = require('./src/routers/productDetailRouter')
+const productsRouter = require('./src/routers/products')
 const addProduct = require('./src/routers/addProductRouter')
 const modifyProduct = require('./src/routers/modifyProductRouter')
 
@@ -39,7 +39,7 @@ app.use(mainRouter);
 app.use(userLoginRouter)
 app.use(userRegisterRouter)
 app.use(cartProducts)
-app.use(productDetail)
+app.use(productsRouter)
 app.use(addProduct)
 app.use(modifyProduct)
 
