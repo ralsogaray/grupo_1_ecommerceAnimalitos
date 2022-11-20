@@ -11,7 +11,6 @@ const userLoginRouter = require('./src/routers/userLoginRouter');
 const userRegisterRouter = require('./src/routers/userRegisterRouter');
 const cartProducts = require('./src/routers/cartRouter')
 const productsRouter = require('./src/routers/products')
-const addProduct = require('./src/routers/addProductRouter')
 const modifyProduct = require('./src/routers/modifyProductRouter')
 
 //const mainRouter = require ('./src/views/routers/mainRouter');
@@ -40,7 +39,6 @@ app.use(userLoginRouter)
 app.use(userRegisterRouter)
 app.use(cartProducts)
 app.use(productsRouter)
-app.use(addProduct)
 app.use(modifyProduct)
 
 
