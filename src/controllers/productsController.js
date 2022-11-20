@@ -8,8 +8,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 module.exports = {
     index: (req, res) => {
-        return res.render('products/index.ejs')
+        return res.render('products/index')
     },
+
     detail: (req, res) => {
         const productId = req.params.id;
         const product = products.find(
@@ -20,5 +21,9 @@ module.exports = {
         }
 
         return res.render('products/detail', { product })
+    },
+
+    create: (req, res) => {
+        return res.render('products/create')
     },
 }
