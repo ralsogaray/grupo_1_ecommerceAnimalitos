@@ -26,4 +26,16 @@ module.exports = {
     create: (req, res) => {
         return res.render('products/create')
     },
+    
+    store: (req, res) =>{
+        const camposNewProduct = req.body;
+        const productJSON = JSON.stringify(camposNewProduct);
+    //camposNewProduct.id = productJSON.length;
+
+        fs.writeFileSync(productsFilePath, productJSON);
+    
+    //    fs.writefilesync(productsFilePath, JSON.stringify(product));
+    
+    return res.send(camposNewProduct)
+    },
 }
