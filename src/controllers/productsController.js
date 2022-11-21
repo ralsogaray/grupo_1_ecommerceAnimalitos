@@ -12,16 +12,17 @@ module.exports = {
     },
 
     detail: (req, res) => {
-        const productId = req.params.id;
-        const product = products.find(
+        const productId = req.params.productId;
+        const productToFind = products.find(
             (product) => product.id == productId
         );
-        if (!product) {
+        if(productToFind == undefined){
             return res.send('No existe ese producto')
         }
-
-        return res.render('products/detail', { product })
-    },
+        return res.render('products/detail', {
+            product: productToFind
+        })
+        },
 
     create: (req, res) => {
         return res.render('products/create')

@@ -1,11 +1,12 @@
-<%- include('../partials/metadata.ejs') %>
+<%- include('../partials/metadata.ejs') %> 
 
-    <%- include('../partials/header.ejs') %>
-        <main>
-            <section class="product-main">
+<%- include('../partials/header.ejs') %> 
+    <main>
+        <section class="product-box">
+            <div class="product-main">
                 <article class="product-img">
                     <div>
-                        <img src="\images\alimento-excellent-gatos.png" alt="product-excellent">
+                        <img src="/images/<%= product.image %>  " alt="product-excellent">
                         <button type="button">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -13,21 +14,13 @@
                 </article>
                 <article class="product-info-main">
                     <div class="product-info">
-                        <h3>
-                            <%= product.name %>
-                        </h3>
-                        <p>
-                            <%= product.description %>
-                        </p>
-                        <p class="price-product">
-                            $<%= product.price %>
-                        </p>
+                        <h3> <%= product.name %> </h3>
+                        <p> Referencia: <%= product.name %> </p>
+                        <p class="price-product"> $ <%= product.price %> </p>
                     </div>
                     <div class="product-info-chart">
-                        <h4> Excellent Gato Adulto</h4>
-                        <p> Pollo y Arroz, ofrece una fórmula con proteínas
-                            de alta digestibilidad y ácidos grasos omega 3 y 6,
-                            para mantener al máximo la salud del gato adulto.</p>
+                        <h4> <%= product.name %> </h4>
+                        <p> <%= product.description %> </p>
                         <br>
                         <div class="product-chart">
                             <div class="number-chart">
@@ -38,19 +31,21 @@
                                 <button type="button">
                                     <i class="fa fa-angle-down"></i>
                                 </button>
-                            </div>
+                            </div>                        
                             <div class="add-chart">
-                                <button type="submit">
-                                    <i class="fa-sharp fa-solid fa-cart-plus"></i>
-                                    Añadir al carrito
-                                </button>
+                                <a href="../cart">
+                                    <button type="submit">
+                                        <i class="fa-sharp fa-solid fa-cart-plus"></i>
+                                        Añadir al carrito 
+                                    </button> 
+                                </a>                                               
                                 <button type="button" alt="Añadir a lista de deseados">
                                     <i class="fa-solid fa-heart"></i>
                                 </button>
                                 <button type="button" alt="Comparar producto">
                                     <i class="fa-solid fa-shuffle"></i>
                                 </button>
-                            </div>
+                            </div>                        
                         </div>
                     </div>
                     <br>
@@ -67,7 +62,7 @@
                         <br>
                         <i class="fa-solid fa-truck"></i>
                         <p>ENVÍOS SIN CARGO A C.A.B.A & ZONA OESTE
-
+    
                             (resto del país a cargo del comprador)</p>
                         <br>
                         <i class="fa-regular fa-credit-card"></i>
@@ -87,26 +82,28 @@
                                 alt="logo fb"></a>
                         <p>Facebook</p>
                     </div>
+                    <div class="modify-chart">
+                        <a href="../modifyProduct/<%= product.id %>/" >
+                            <button type="submit">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                Editar Producto
+                            </button>
+                        </a>        
+                        <a href="">
+                            <button type="submit">
+                                <i class="fa-solid fa-trash"></i>
+                                Borrar Producto
+                            </button>
+                        </a>                    
+                    </div>
                 </article>
-            </section>
-            <section class="product-description">
-                <br>
-                <h4>Descripcion del producto</h4>
-                <p>La utilización de fuentes de proteínas de elevada digestibilidad garantiza el aporte de
-                    aminoácidos
-                    esenciales que ayudan a mantener músculos fuertes y sanos. Así, cualquiera sea el nivel de
-                    actividad
-                    física de tu gato, puedes estar seguro de que sus necesidades proteicas estarán
-                    satisfechas.</p>
-
-                <p>Ayuda a mantener un pH adecuado en la orina, el cual contribuye a la reducción de la formación de
-                    cálculos y cristales, colaborando con el mantenimiento de un tracto urinario saludable, fundamental
-                    para la salud de tu gato.</p>
-
-                <p>Piel sana y pelaje brillante. La combinación de los ácidos grasos Omega 6 y 3 junto a vitaminas y
-                    minerales favorecen la salud de la piel y un pelaje brillante, primera señal de una salud general
-                    adecuada.</p>
-                <br>
-            </section>
-        </main>
-        <%- include('../partials/footer.ejs') %>
+            </div>            
+        </section>
+        <section class="product-description">
+            <br>
+            <h4>Descripcion del producto</h4>
+            <p> <%= product.description %> </p> 
+            <br>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>

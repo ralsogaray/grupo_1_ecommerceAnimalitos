@@ -379,6 +379,15 @@ a {
     padding-bottom: 10px;
 }
 
+div.modify-chart button {
+    background-color: rgb(178, 33, 81);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 5px;
+}
+
 
 /********   INDEX *******/
 
@@ -986,6 +995,11 @@ input[type="submit"]:hover{
 }
 
 @media screen and (min-width: 992px) {
+    section.product-box {
+        display: block;
+        box-sizing: border-box;
+        margin: 25px;
+    }
     .product-main {
         display: flex;
         flex-direction: row;
@@ -1005,6 +1019,7 @@ input[type="submit"]:hover{
     .product-info-main {
         margin: 10px 25px;
         padding: 15px;
+        width: 50%;
     }
 
 
