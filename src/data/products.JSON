@@ -3,7 +3,7 @@
   "name": "Owl, madagascar hawk",
   "description": "ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam",
   "brand": "Ninox superciliaris",
-  "category": "catFood",
+  "category": "dogFood",
   "price": 13981.18,
   "image": "alimento-excellent-gatos.png"
 }, {
@@ -19,7 +19,7 @@
   "name": "Feathertail glider",
   "description": "ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac",
   "brand": "Acrobates pygmaeus",
-  "category": "dogClothes",
+  "category": "dogFood",
   "price": 12947.57,
   "image": "AlimentoAdulto.png"
 }, {
@@ -43,7 +43,7 @@
   "name": "Southern boubou",
   "description": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi",
   "brand": "Laniarius ferrugineus",
-  "category": "catAccesory",
+  "category": "catFood",
   "price": 5370.11,
   "image": "AlimentoSenior.png"
 }, {
@@ -51,7 +51,7 @@
   "name": "Greater rhea",
   "description": "in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa",
   "brand": "Rhea americana",
-  "category": "catAccesory",
+  "category": "catFood",
   "price": 11330.33,
   "image": "AlimentoCachorro.png"
 }, {
@@ -75,7 +75,7 @@
   "name": "Osprey",
   "description": "nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit",
   "brand": "Pandon haliaetus",
-  "category": "catClothes",
+  "category": "dogClothes",
   "price": 6730.64,
   "image": "alimento-excellent-gatos.png"
 }]

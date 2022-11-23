@@ -42,61 +42,22 @@
             <button class="boton-filtrar-productos">Filtrar</button>
 
             <div class="cards-productos">
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Alimento Perro Adulto Marca Greendog</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
 
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Alimento Perro Adulto Marca Greendog</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Alimento Perro Adulto Marca Greendog</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Alimento Perro Adulto Marca Greendog</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
+                <% catFood.forEach(catfood => {%>
+                    <article>
+                        <div>
+                            <img class="imagen-producto-destacado" src="/images/<%= catfood.image %>"
+                                alt="<%= catfood.description%>">
+                        </div>
+                        <div class="cards-productos-informacion">
+                            <p class="cards-precio-producto"><%= catfood.price%></p>
+                            <p class="cards-descripcion-producto"><%= catfood.name %></p>
+                        </div>
+                        <div id="cards-boton-agregarAlCarrito">
+                            <p>Agregar</p>
+                        </div>
+                    </article>
+                <% }) %>
             </div>
         </section>
 
@@ -105,61 +66,21 @@
             <button class="boton-filtrar-productos">Filtrar</button>
 
             <div class="cards-productos">
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Lorem ipsum dolor sit amet consectetur elit.</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Lorem ipsum dolor sit amet consectetur elit.</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Lorem ipsum dolor sit amet consectetur elit.</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-
-                <article>
-                    <div>
-                        <img class="imagen-producto-destacado" src="/images/geendog-super-premium.jpeg"
-                            alt="imagen comida para perros">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">$9999</p>
-                        <p class="cards-descripcion-producto">Lorem ipsum dolor sit amet consectetur elit.</p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
+                <% dogFood.forEach(dogfood => {%>
+                    <article>
+                        <div>
+                            <img class="imagen-producto-destacado" src="/images/<%= dogfood.image %>"
+                                alt="<%= dogfood.description%>">
+                        </div>
+                        <div class="cards-productos-informacion">
+                            <p class="cards-precio-producto"><%= dogfood.price%></p>
+                            <p class="cards-descripcion-producto"><%= dogfood.name %></p>
+                        </div>
+                        <div id="cards-boton-agregarAlCarrito">
+                            <p>Agregar</p>
+                        </div>
+                    </article>
+                <% }) %>  
             </div>
         </section>
 
