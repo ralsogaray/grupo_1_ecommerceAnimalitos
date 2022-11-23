@@ -4,8 +4,8 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
-        <h3 class="titulo">Modificá un Producto</h3>
-        <form method="post" action="/" class="formRegistro" enctype="multipart/form-data">
+        <h3 class="titulo">Borrar un Producto</h3>
+        <form method="post" action="/deleteProducts/<%= product.id %>?_method=DELETE" class="formRegistro" enctype="multipart/form-data">
             <div>
                 <label for="product-name" class="labelForm">Nombre del Producto</label>
                 <input type="text" class="inputRegistro" name="product-name" id="product-name" value="<%= product.name %>" required>
@@ -13,11 +13,7 @@
             <div>
                 <label for="product-description" class="labelForm">Descripción</label>
                 <input type="text" class="inputRegistro" name="product-description" id="product-description" value="<%= product.description %>" required>
-            </div>
-            <div>
-                <label for="product-image" class="labelForm">Foto del Producto</label>
-                <input type="file" class="inputRegistro" name="product-image" id="product-image" value="<%= product.image %>" required>
-            </div>
+            </div>           
             <div>
                 <label for="category" class="labelForm">Categoría</label>
                 <input type="text" class="inputRegistro" name="category" id="category" value="<%= product.category %>" required>
@@ -33,11 +29,11 @@
                 <label for="price" class="labelForm">Precio</label>
                 <input type="text" class="inputRegistro" name="price" id="price" value=" $ <%= product.price %>" required>
             </div>
-
-
-            <div class="buttonContainer">
-                <button type="submit">Editar Producto</button>
-            </div>
+            <form method="post" action="/deleteProducts/<%= product.id %>?_method=DELETE">
+                <div class="buttonContainer">
+                    <button type="submit">Borrar Producto</button>
+                </div>
+            </form> 
         </form>
     </main>
     
