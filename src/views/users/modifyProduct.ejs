@@ -5,19 +5,16 @@
 
     <main>
         <h3 class="titulo">Modificá un Producto</h3>
-        <form method="post" action="/" class="formRegistro" enctype="multipart/form-data">
+        <form method="POST" action="/modifyProduct/<%= product.id %>?_method=PUT" class="formRegistro">
             <div>
                 <label for="product-name" class="labelForm">Nombre del Producto</label>
-                <input type="text" class="inputRegistro" name="product-name" id="product-name" value="<%= product.name %>" required>
+                <input type="text" class="inputRegistro" name="name" id="product-name" value="<%= product.name %>" required>
             </div>
             <div>
                 <label for="product-description" class="labelForm">Descripción</label>
-                <input type="text" class="inputRegistro" name="product-description" id="product-description" value="<%= product.description %>" required>
+                <input type="text" class="inputRegistro" name="description" id="product-description" value="<%= product.description %>" required>
             </div>
-            <div>
-                <label for="product-image" class="labelForm">Foto del Producto</label>
-                <input type="file" class="inputRegistro" name="product-image" id="product-image" value="<%= product.image %>" required>
-            </div>
+            
             <div>
                 <label for="category" class="labelForm">Categoría</label>
                 <input type="text" class="inputRegistro" name="category" id="category" value="<%= product.category %>" required>
@@ -25,13 +22,13 @@
 
             <div>
                 <label for="animal-type" class="labelForm">Tipo de Animal</label>
-                <label for="animal-type"><input type="radio" name="animal-type" value="Perro" required checked>Perro</label>
-                <label for="animal-type"><input type="radio" name="animal-type" value="Gato" required>Gato</label>
+                <label for="animal-type"><input type="radio" name="type" value="Perro" required checked>Perro</label>
+                <label for="animal-type"><input type="radio" name="type" value="Gato" required>Gato</label>
             </div>
 
             <div>
                 <label for="price" class="labelForm">Precio</label>
-                <input type="text" class="inputRegistro" name="price" id="price" value=" $ <%= product.price %>" required>
+                <input type="text" class="inputRegistro" name="price" id="price" value="<%= product.price %>" required>
             </div>
 
 
