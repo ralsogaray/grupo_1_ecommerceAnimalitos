@@ -7,6 +7,6 @@ const userRegisterController = require('../controllers/userRegisterController');
 router.get("/register", userRegisterController.renderRegister)
 
 
-module.exports = router
+module.exports = router;
 
 

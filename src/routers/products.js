@@ -32,6 +32,6 @@ router.get(`${baseRoute}/:productId/`, productsController.detail)
 
 
 
-module.exports = router
+module.exports = router;
 
 
