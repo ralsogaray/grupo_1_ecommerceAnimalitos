@@ -4,4 +4,4 @@ const renderCart = (req,res) => {
 }
 
 
-module.exports = {renderCart}
+module.exports = {renderCart};

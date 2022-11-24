@@ -10,4 +10,4 @@ const renderLogin = (req,res) => {
 
 
 
-module.exports = {renderLogin}
+module.exports = {renderLogin};

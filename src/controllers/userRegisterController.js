@@ -7,4 +7,4 @@ const renderRegister = (req,res) => {
 }
 
 
-module.exports = {renderRegister}
+module.exports = {renderRegister};
