@@ -38,10 +38,29 @@ const renderModifyProduct = {
             (product) => product.id == productId
         );
         if (productToDelete) {
-            products.filter(product => product.id !== id);
+            const productDeleted = products.filter(product => product.id != productId);
+            const productJson = JSON.stringify(productDeleted);
+            return fs.writeFileSync(productsFilePath, productJson)
         } else
             res.render('./products/index.ejs');
+    },
+    update: (req, res) => {
+        const dataToUpdate = req.body;
+        const productId = req.params.productId;
+        const productToEdit = products.findIndex(
+            (product) => product.id == productId
+        );
+        const oldData = products[productToEdit];
+        products[productToEdit]= {
+            ...oldData,
+            ...dataToUpdate
+        }     
+        console.log(dataToUpdate) 
+        const productJson = JSON.stringify(products, null, 2);
+        fs.writeFileSync(productsFilePath, productJson)
+        return res.render('./products/index.ejs');
     }
 }
+
 
 module.exports = { renderModifyProduct }

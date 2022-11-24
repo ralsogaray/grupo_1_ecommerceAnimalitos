@@ -5,6 +5,9 @@ const path = require('path');
 const publicFolderPath = path.resolve('public');
 const methodOverride = require('method-override');
 
+app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
+
 //routes required
 const mainRouter = require('./src/routers/mainRouter');
 const userLoginRouter = require('./src/routers/userLoginRouter');
@@ -20,9 +23,7 @@ app.use(express.static(publicFolderPath));
 
 // ejs 
 //=======
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(methodOverride('_method'));
+
 
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
