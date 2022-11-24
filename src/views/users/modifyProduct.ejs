@@ -8,11 +8,11 @@
         <form method="POST" action="/modifyProduct/<%= product.id %>?_method=PUT" class="formRegistro">
             <div>
                 <label for="product-name" class="labelForm">Nombre del Producto</label>
-                <input type="text" class="inputRegistro" name="name" id="product-name" value="<%= product.name %>" required>
+                <input type="text" class="inputRegistro" name="product-name" id="product-name" value="<%= product.name %>" required>
             </div>
             <div>
                 <label for="product-description" class="labelForm">Descripción</label>
-                <input type="text" class="inputRegistro" name="description" id="product-description" value="<%= product.description %>" required>
+                <input type="text" class="inputRegistro" name="product-description" id="product-description" value="<%= product.description %>" required>
             </div>
             
             <div>
@@ -22,8 +22,8 @@
 
             <div>
                 <label for="animal-type" class="labelForm">Tipo de Animal</label>
-                <label for="animal-type"><input type="radio" name="type" value="Perro" required checked>Perro</label>
-                <label for="animal-type"><input type="radio" name="type" value="Gato" required>Gato</label>
+                <label for="animal-type"><input type="radio" name="animal-type" value="Perro" required checked>Perro</label>
+                <label for="animal-type"><input type="radio" name="animal-type" value="Gato" required>Gato</label>
             </div>
 
             <div>
