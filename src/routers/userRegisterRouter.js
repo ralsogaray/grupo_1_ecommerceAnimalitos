@@ -1,10 +1,25 @@
 const express = require('express');
-//const path = require('path');
+const path = require('path');
 const router = express.Router();
 const userRegisterController = require('../controllers/userRegisterController');
 
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb){
+        cb(null, path.resolve("public/images/users/"))
+    },
+    filename: function (req, file, cb){
+        const uniqueSuffix = Date.now();
+        const fileExtension = path.extname(file.originalname);
+        const newName = file.originalname.replace(fileExtension, '')
+        cb(null, newName + "-" + uniqueSuffix + fileExtension);
+    },
+});
 
-router.get("/register", userRegisterController.renderRegister)
+const upload = multer({ storage });
+
+router.get("/register", userRegisterController.renderRegister);
+router.post("/register", upload.array('userImage', 12), userRegisterController.store);
 
 
 module.exports = router;

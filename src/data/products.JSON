@@ -5,7 +5,7 @@
   "animal-type": "Ninox superciliaris",
   "category": "dogFood",
   "price": 13981.18,
-  "product-image": "alimento-excellent-gatos.png"
+  "image": "alimento-excellent-gatos.png"
 }, {
   "id": 2,
   "product-name": "Dik, kirk's dik",
@@ -13,7 +13,7 @@
   "animal-type": "Madoqua kirkii",
   "category": "dogFood",
   "price": 7970.64,
-  "product-image": "agility-perro-adulto.jpeg"
+  "image": "agility-perro-adulto.jpeg"
 }, {
   "id": 3,
   "product-name": "Feathertail glider",
@@ -21,7 +21,7 @@
   "animal-type": "Acrobates pygmaeus",
   "category": "dogFood",
   "price": 12947.57,
-  "product-image": "AlimentoAdulto.png"
+  "image": "AlimentoAdulto.png"
 }, {
   "id": 4,
   "product-name": "Woodcock, american",
@@ -29,7 +29,7 @@
   "animal-type": "Scolopax minor",
   "category": "catFood",
   "price": 6364.33,
-  "product-image": "AlimentoCachorro.png"
+  "image": "AlimentoCachorro.png"
 }, {
   "id": 5,
   "product-name": "Fox, blue",
@@ -37,7 +37,7 @@
   "animal-type": "Alopex lagopus",
   "category": "dogFood",
   "price": 6464.67,
-  "product-image": "AlimentoSenior.png"
+  "image": "AlimentoSenior.png"
 }, {
   "id": 6,
   "product-name": "Southern boubou",
@@ -45,7 +45,7 @@
   "animal-type": "Laniarius ferrugineus",
   "category": "catFood",
   "price": 5370.11,
-  "product-image": "AlimentoSenior.png"
+  "image": "AlimentoSenior.png"
 }, {
   "id": 7,
   "product-name": "Greater rhea",
@@ -53,7 +53,7 @@
   "animal-type": "Rhea americana",
   "category": "catFood",
   "price": 11330.33,
-  "product-image": "AlimentoCachorro.png"
+  "image": "AlimentoCachorro.png"
 }, {
   "id": 8,
   "product-name": "Bush dog",
@@ -61,7 +61,7 @@
   "animal-type": "Speothos vanaticus",
   "category": "catFood",
   "price": 13305.06,
-  "product-image": "agility-perro-adulto.jpeg"
+  "image": "agility-perro-adulto.jpeg"
 }, {
   "id": 9,
   "product-name": "Goat, mountain",
@@ -69,7 +69,7 @@
   "animal-type": "Oreamnos americanus",
   "category": "catClothes",
   "price": 4366.68,
-  "product-image": "AlimentoAdulto.png"
+  "image": "AlimentoAdulto.png"
 }, {
   "id": 10,
   "product-name": "Osprey",
@@ -77,5 +77,5 @@
   "animal-type": "Pandon haliaetus",
   "category": "dogClothes",
   "price": 6730.64,
-  "product-image": "alimento-excellent-gatos.png"
+  "image": "alimento-excellent-gatos.png"
 }]

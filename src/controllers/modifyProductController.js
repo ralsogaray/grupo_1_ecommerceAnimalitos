@@ -55,7 +55,7 @@ const renderModifyProduct = {
             ...oldData,
             ...dataToUpdate
         }     
-        console.log(dataToUpdate) 
+        //console.log(dataToUpdate) 
         const productJson = JSON.stringify(products, null, 2);
         fs.writeFileSync(productsFilePath, productJson)
         return res.render('./products/index.ejs');
