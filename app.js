@@ -5,8 +5,18 @@ const path = require('path');
 const publicFolderPath = path.resolve('public');
 const methodOverride = require('method-override');
 
+/// Sprint 5
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
+
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+
+// sprint 5
+app.use(cookieParser())
+app.use(session({
+    secret: 'secret word'
+}))
 
 //routes required
 const mainRouter = require('./src/routers/mainRouter');

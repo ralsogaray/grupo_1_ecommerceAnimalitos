@@ -6,6 +6,7 @@ const userLoginController = require('../controllers/userLoginController');
 
 
 router.get("/login", userLoginController.renderLogin)
+router.post("/login", userLoginController.processLogin)
 
 
 
