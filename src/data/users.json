@@ -4,8 +4,8 @@
     "full_name": "Lucien Harrington",
     "user_name": "lharrington0",
     "email": "lharrington0@studiopress.com",
-    "gender": "Male",
     "birth_day": "26/08/1933",
+    "interes": "services",
     "password": "MCGLP2J7VjAz",
     "userImage": "image.jpeg"
   },
@@ -14,8 +14,8 @@
     "full_name": "Evangelina O' Meara",
     "user_name": "eo1",
     "email": "eo1@amazon.com",
-    "gender": "Female",
     "birth_day": "08/03/1945",
+    "interes": "accesories",
     "password": "46cdwfo43ofZ",
     "userImage": "image.jpeg"
   },
@@ -24,8 +24,8 @@
     "full_name": "Mick Drayton",
     "user_name": "mdrayton2",
     "email": "mdrayton2@jugem.jp",
-    "gender": "Male",
     "birth_day": "03/08/1926",
+    "interes": "toys",
     "password": "gzfP07ShsH",
     "userImage": "image.jpeg"
   },
@@ -34,8 +34,8 @@
     "full_name": "Teirtza Neat",
     "user_name": "tneat3",
     "email": "tneat3@huffingtonpost.com",
-    "gender": "Female",
     "birth_day": "12/09/1980",
+    "interes": "dog",
     "password": "1n6nmj",
     "userImage": "image.jpeg"
   },
@@ -44,8 +44,8 @@
     "full_name": "Dolorita Morson",
     "user_name": "dmorson4",
     "email": "dmorson4@samsung.com",
-    "gender": "Female",
     "birth_day": "11/05/1974",
+    "interes": "cat",
     "password": "1isfwfbX",
     "userImage": "image.jpeg"
   },
@@ -54,8 +54,8 @@
     "full_name": "Mavra Newcomen",
     "user_name": "mnewcomen5",
     "email": "mnewcomen5@mtv.com",
-    "gender": "Female",
     "birth_day": "06/02/1980",
+    "interes": "services",
     "password": "aeLWdZXzT",
     "userImage": "image.jpeg"
   },
@@ -64,8 +64,8 @@
     "full_name": "Aubrie Gynn",
     "user_name": "agynn6",
     "email": "agynn6@ihg.com",
-    "gender": "Non-binary",
     "birth_day": "26/05/1965",
+    "interes": "toys",
     "password": "2oZ9FM4BuyZ",
     "userImage": "image.jpeg"
   },
@@ -74,8 +74,8 @@
     "full_name": "Florencia Kovalski",
     "user_name": "fkovalski7",
     "email": "fkovalski7@yelp.com",
-    "gender": "Genderfluid",
     "birth_day": "13/07/1953",
+    "interes": "accesories",
     "password": "NKUG3g",
     "userImage": "image.jpeg"
   },
@@ -84,8 +84,8 @@
     "full_name": "Orelia Eckly",
     "user_name": "oeckly8",
     "email": "oeckly8@blogspot.com",
-    "gender": "Female",
     "birth_day": "25/02/1988",
+    "interes": "dog",
     "password": "QU2xQRckjXHL",
     "userImage": "image.jpeg"
   },
@@ -94,8 +94,8 @@
     "full_name": "Glynnis Okker",
     "user_name": "gokker9",
     "email": "gokker9@live.com",
-    "gender": "Genderqueer",
     "birth_day": "02/02/1921",
+    "interes": "cat",
     "password": "dMGsd6dV2da",
     "userImage": "image.jpeg"
   }

@@ -9,13 +9,12 @@ module.exports = {
         return res.render('users/register.ejs')
     
     },
-    store: (req, res) =>{
+    register: (req, res) =>{
         const camposNewUser = req.body;
-        const usersJSON = JSON.stringify(camposNewUser);
-        camposNewUser.id = usersJSON.length;
+        camposNewUser.id = users.length + 1;
         users.push(camposNewUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
        
-    return res.render('index.ejs');
+    return res.redirect('./');
     }
 };
