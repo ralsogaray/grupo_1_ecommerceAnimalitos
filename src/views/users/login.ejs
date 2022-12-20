@@ -4,20 +4,23 @@
 
     <%- include('../partials/header.ejs') %> 
         <main>
-            <form method="post" action="/" class="formRegistro" enctype="multipart/form-data">
+            <form method="post" action="/login" class="formRegistro" >
                 <div class="text-field">
                     <div><h3 class="center">Ingresá a tu Cuenta</h3></div>
-                    <input type="text" required>
+                    <input type="text" name="email" required>
                     <span></span>
                     <label>Usuario</label>
                 </div>
+               
                 <div class="text-field">
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <span></span>
                     <label>Contraseña</label>
                 </div>
                 <div class="forget-pass-field">¿Olvidaste tu contraseña?</div>
-                <input type="submit" value="Ingresá">
+                
+                <button type="submit">Ingresá</button>
+               
                 <div class="signup-link">
                 ¿No sos miembro? <a href="/register">¡Registrate!</a>
                 </div>
