@@ -4,4 +4,4 @@ function guestMiddleware(req,res,next){
     }
     return next()
 }
-module.exports=guestMiddleware
+module.exports = guestMiddleware

@@ -1,7 +1,7 @@
 function authMiddleware(req,res,next){
-    if(!req.session.userLogged){
-        return res.redirect('/users/login')
+    if(req.session.userLogged == undefined){
+        return res.redirect('/login')
     }
-    return next()
+   return  next()
 }
-module.exports=authMiddleware
+module.exports = authMiddleware

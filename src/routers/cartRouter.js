@@ -3,10 +3,12 @@ const express = require('express');
 const router = express.Router();
 const cartController = require('../controllers/cartController');
 
-const userLoginMiddleware =  require ("../../middlewares/userAuthCheck")
 
 
-router.get('/cart', cartController.renderCart)
+const userLoginMiddleware =  require ("../../middlewares/authMiddelware")
+
+
+router.get('/cart', userLoginMiddleware , cartController.renderCart)
 
 
 module.exports = router;

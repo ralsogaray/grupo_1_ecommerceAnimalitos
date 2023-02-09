@@ -4,6 +4,30 @@
     
     <%- include('../partials/header.ejs') %> 
 
+    <main>
+
+        <div class="formRegistro" style="text-align: center;">
+            <h1>Bienvenido a su perfil</h1>
+            <div >
+                <img src="<%= userLogged.userImage %>" alt="imagen de usuario">
+            </div>
+
+
+
+        <h2> <%= userLogged.full_name %></h2>
+
+
+        </div>
+        
+
+
+
+    </main>
+
+
+    
+
+
+    <%- include('../partials/footer.ejs') %> 
 
 </body>
-<h1>HOLA SOY LA PAGINA DE PROFILE</h1>

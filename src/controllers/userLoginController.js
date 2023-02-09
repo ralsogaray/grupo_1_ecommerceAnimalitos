@@ -18,7 +18,6 @@ const renderLogin = (req,res) => {
 const processLogin = (req, res) =>{
     const data = req.body
     
-    const hash = bcrypt.hashSync(data.password, 10)
     //deposito el usuario
     const userToFind = users.find(
         (usuario) => usuario.email == data.email
@@ -28,35 +27,19 @@ const processLogin = (req, res) =>{
         return res.render("users/login.ejs")
     }
     else if(data.password == userToFind.password){
-        req.session.user = userToFind
-        return res.render("users/profile.ejs", userToFind)
+        req.session.userLogged = userToFind
+        userLogged = req.session.userLogged
+        
+        console.log( userLogged)
+        return res.render("users/profile.ejs", { userLogged })
     }
-/** 
-    
-    //const comparedPassword = bcrypt.compareSync(data.password, hash)
-    //console.log(comparedPassword)
-    
-    
-    
-    if(userToFind == undefined){
-        return res.render("users/login.ejs")
-    }
-    else{
-        req.session.user = userToFind
-        return res.send(req.session.user.user_name)
-    }
-    //res.send(userToFind)
-    /^
-    if (productToFind == undefined) {
-        return res.send('No existe ese producto')
-    }
-    return res.render('users/deleteProduct', {
-        product: productToFind
-    })
-    console.log(data)
-    */
+
+}
+
+const renderProfile = (req, res) =>{
+    res.render('users/login.ejs')
 }
 
 
 
-module.exports = {renderLogin, processLogin};
+module.exports = {renderLogin, processLogin, renderProfile};

@@ -4,18 +4,15 @@ const router = express.Router();
 const userLoginController = require('../controllers/userLoginController');
 const { check } = require('express-validator')
 
+const userLoginMiddleware =  require ("../../middlewares/authMiddelware")
 
-/*
-const loginValidator = [
-    check('email').notEmpty().withMessage('Debes completar el email'),
-    check('password').notEmpty().withMessage('Debes completar la contraseña')
-]*/
 
 
 
 router.get("/login", userLoginController.renderLogin)
-router.post("/login", userLoginController.processLogin)
+router.post("/login",  userLoginController.processLogin)
 
+router.get('/profile', userLoginMiddleware,  userLoginController.renderProfile)
 
 
 module.exports = router;
