@@ -37,7 +37,7 @@ const processLogin = (req, res) =>{
 }
 
 const renderProfile = (req, res) =>{
-    res.render('users/login.ejs')
+    res.render('users/profile.ejs')
 }
 
 

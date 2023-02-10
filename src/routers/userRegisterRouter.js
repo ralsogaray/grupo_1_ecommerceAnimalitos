@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const userRegisterController = require('../controllers/userRegisterController');
+const guestMiddleware = require('../../middlewares/guestMiddelware')
 
 const multer = require('multer');
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
         cb(null, path.resolve("public/images/users/"))
@@ -18,7 +20,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.get("/register", userRegisterController.renderRegister);
+router.get("/register", guestMiddleware, userRegisterController.renderRegister);
 router.post("/register", upload.array('userImage', 12), userRegisterController.register);
 
 
