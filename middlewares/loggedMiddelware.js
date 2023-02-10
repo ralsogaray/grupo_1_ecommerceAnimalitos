@@ -1,12 +1,18 @@
-const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.resolve('./src/data/usersJSON.json');
 
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 function userLoggedMiddleware(req,res,next){
-    res.locals.isLogged=false
+    res.locals.isLogged = false
+    console.log("chau middel")
+    
+    
+    if(req.session && req.session.userLogged){
+        res.locals.isLogged = true
+        res.locals.user = req.session.userLogged.user_name
+        
+    }
 
+    return next()
+ /*
     const emailInCookie = req.cookies.userEmail
     const userFromCookie = users.find(user => user.email == emailInCookie)
 
@@ -17,8 +23,8 @@ function userLoggedMiddleware(req,res,next){
     if(req.session.userLogged){
         res.locals.isLogged=true
         res.locals.userLogged=req.session.userLogged
-    }
+    }*/
 
-    return next()
+    
 }
-module.exports=userLoggedMiddleware
+module.exports = userLoggedMiddleware

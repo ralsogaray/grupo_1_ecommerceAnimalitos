@@ -9,24 +9,26 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
 
 
 const renderLogin = (req,res) => {
-
-    
     return res.render('users/login.ejs')
-
 }
 
 const processLogin = (req, res) =>{
     const data = req.body
     
-    //deposito el usuario
     const userToFind = users.find(
         (usuario) => usuario.email == data.email
     );
     
     if(userToFind == undefined){
-        return res.render("users/login.ejs")
+        return res.render("users/login.ejs", {
+            errors: {
+                email: {
+                    msg: 'Las credenciales son incorrectas'
+                } 
+            }
+        })
     }
-    else if(data.password == userToFind.password){
+    else if(data.password == userToFind.password && data.email == userToFind.email){
         req.session.userLogged = userToFind
         userLogged = req.session.userLogged
         
@@ -39,6 +41,7 @@ const processLogin = (req, res) =>{
 const renderProfile = (req, res) =>{
     res.render('users/profile.ejs')
 }
+
 
 
 

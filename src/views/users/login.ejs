@@ -5,13 +5,21 @@
     <%- include('../partials/header.ejs') %> 
         <main>
             <form method="post" action="/login" class="formRegistro" >
+
+                
                 <div class="text-field">
                     <div><h3 class="center">Ingresá a tu Cuenta</h3></div>
+                    
+
                     <input type="text" name="email" required>
                     <span></span>
                     <label>Usuario</label>
                 </div>
-               
+                <% if(locals.errors && errors.email){ %>
+                    <div style="color: red;">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
                 <div class="text-field">
                     <input type="password" name="password" required>
                     <span></span>
