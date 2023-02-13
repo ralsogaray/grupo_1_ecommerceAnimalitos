@@ -14,5 +14,7 @@ router.get("/login", guestMiddleware, userLoginController.renderLogin)
 router.post("/login",  userLoginController.processLogin)
 router.get('/profile', userLoginMiddleware,  userLoginController.renderProfile)
 
+router.get('/logout', userLoginController.logOut)
+
 
 module.exports = router;

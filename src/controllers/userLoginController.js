@@ -32,17 +32,31 @@ const processLogin = (req, res) =>{
         req.session.userLogged = userToFind
         userLogged = req.session.userLogged
         
-        console.log( userLogged)
+        //console.log( data.recordame )
+
+        if(data.recordame == "on"){
+            //console.log( data.recordame )
+            res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
+            console.log(req.cookies.userEmail)
+        }
         return res.render("users/profile.ejs", { userLogged })
     }
 
 }
 
 const renderProfile = (req, res) =>{
+    console.log(req.cookies.userEmail)
     res.render('users/profile.ejs')
+}
+
+const logOut = (req, res) =>{
+    //res.clearCookie('userEmail') 
+    req.session.destroy()
+    return res.redirect('/')
+
 }
 
 
 
 
-module.exports = {renderLogin, processLogin, renderProfile};
+module.exports = {renderLogin, processLogin, renderProfile, logOut};

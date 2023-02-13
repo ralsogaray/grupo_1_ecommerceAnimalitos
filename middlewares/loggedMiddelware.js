@@ -1,8 +1,15 @@
+const fs = require("fs");
+const path = require("path");
+
+
+//const usersFilePath = path.join(__dirname, "../data/users.json");
+//const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
+
 
 
 function userLoggedMiddleware(req,res,next){
     res.locals.isLogged = false
-    console.log("chau middel")
+    //console.log("chau middel")
     
     
     if(req.session && req.session.userLogged){
