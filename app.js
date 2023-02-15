@@ -31,15 +31,13 @@ const cartProducts = require('./src/routers/cartRouter')
 const productsRouter = require('./src/routers/products')
 const modifyProduct = require('./src/routers/modifyProductRouter')
 
-//const mainRouter = require ('./src/views/routers/mainRouter');
+
 
 // find public resources
 app.use(express.static(publicFolderPath));
 
 // ejs 
 //=======
-
-
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
 //
