@@ -44,7 +44,7 @@ const userValidation = {
             next();
           }
     ],
-    loginFormValidations: [
+/*    loginFormValidations: [
         check('email')
             .notEmpty().withMessage('Ingrese un mail').bail()
             .isEmail().withMessage('Ingrese un mail válido')
@@ -65,7 +65,7 @@ const userValidation = {
                 return true
             })
     ]
-
+*/
 }
 
 module.exports = userValidation
