@@ -18,6 +18,11 @@ app.use(session({
     secret: 'secret word'
 }))
 
+const loggedMiddelware = require('./middlewares/loggedMiddelware')
+app.use(loggedMiddelware)
+
+
+
 //routes required
 const mainRouter = require('./src/routers/mainRouter');
 const userLoginRouter = require('./src/routers/userLoginRouter');
