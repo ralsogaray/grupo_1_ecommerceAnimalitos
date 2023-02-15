@@ -39,7 +39,7 @@ const processLogin = (req, res) =>{
             res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
             console.log(req.cookies.userEmail)
         }
-        return res.render("users/profile.ejs", { userLogged })
+        return res.redirect("profile")
     }
 
 }
