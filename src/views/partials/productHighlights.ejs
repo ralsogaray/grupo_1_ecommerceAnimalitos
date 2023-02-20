@@ -5,7 +5,6 @@
     <button class="boton-filtrar-productos">Filtrar</button>
 
     <div class="cards-productos">
-
         <% products.forEach(product=> {%>
             <article>
                 <div class="imagen-producto-destacado-container">
@@ -14,14 +13,14 @@
                 </div>
                 <div class="cards-productos-informacion">
                     <p class="cards-precio-producto">
-                        <%= product.price%>
+                        <%= product.price %>
                     </p>
                     <p class="cards-descripcion-producto">
                         <%= product.name %>
                     </p>
                 </div>
-                <div id="cards-boton-agregarAlCarrito">
-                    <p>Agregar</p>
+                <div class="cards-product-actions">
+                    <button type="button" class="btn-card-agregarAlCarrito">Agregar</button>
                 </div>
             </article>
             <% }) %>

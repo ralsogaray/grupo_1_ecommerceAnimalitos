@@ -534,26 +534,39 @@ div.modify-chart button {
     font-size: 1.3rem;
 }
 
-#cards-boton-agregarAlCarrito {
+.cards-product-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
-#cards-boton-agregarAlCarrito p {
+.btn-card-agregarAlCarrito {
     display: inline-block;
+    
+    background-color: transparent;
+    background-image: none;
+
+    font-weight: 400;
+    text-align: center;
+    color: #007bff;
+
+    white-space: nowrap;
+    vertical-align: middle;
+    
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    border-color: #007bff;
+
     margin: 0rem 1.5rem 1rem 0rem;
-    border: solid grey 2px;
-    padding: 0.5rem;
-    border-radius: 10px;
-    color: white;
-    background: #42f0ff;
-    font-weight: bold;
+    padding: 0.375rem 0.75rem;
+
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-#cards-boton-agregarAlCarrito p:hover {
-    background: rgb(5, 160, 5);
-    cursor: pointer;
+.btn-card-agregarAlCarrito:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 /* quienes somos index */
