@@ -20,7 +20,11 @@
                     </p>
                 </div>
                 <div class="cards-product-actions">
-                    <button type="button" class="btn-card-agregarAlCarrito">Agregar</button>
+                    <% if(locals.isLogged) { %>
+                        <button type="button" class="btn-card-product">Ver</button>
+                    <% } else { %>
+                        <button type="button" class="btn-card-product">Agregar</button>
+                    <% } %>
                 </div>
             </article>
             <% }) %>

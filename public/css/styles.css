@@ -539,7 +539,7 @@ div.modify-chart button {
     justify-content: end;
 }
 
-.btn-card-agregarAlCarrito {
+.btn-card-product {
     display: inline-block;
     
     background-color: transparent;
@@ -563,7 +563,7 @@ div.modify-chart button {
     transition: all 0.2s ease-in-out;
 }
 
-.btn-card-agregarAlCarrito:hover {
+.btn-card-product:hover {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
