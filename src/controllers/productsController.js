@@ -8,7 +8,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 module.exports = {
     index: (req, res) => {
-        return res.render('products/index')
+        return res.render('products/index', {products})
     },
 
     detail: (req, res) => {

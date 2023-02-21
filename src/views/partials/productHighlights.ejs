@@ -1,8 +1,9 @@
 <section class="section-productos-destacados">
-    <h2>
-        <%- title %>
-    </h2>
-    <button class="boton-filtrar-productos">Filtrar</button>
+    
+    <% if(title) { %>
+        <h2><%- title %></h2>
+        <button class="boton-filtrar-productos">Filtrar</button>    
+    <% } %>
 
     <div class="cards-productos">
         <% products.forEach(product=> {%>
@@ -21,7 +22,7 @@
                 </div>
                 <div class="cards-product-actions">
                     <% if(locals.userIsAdmin) { %>
-                        <a href="products/<%=product.id%>" class="btn-card-product">Ver</a>
+                        <a href="/products/<%=product.id%>" class="btn-card-product">Ver</a>
                     <% } else { %>
                         <button type="button" class="btn-card-product">Agregar</button>
                     <% } %>

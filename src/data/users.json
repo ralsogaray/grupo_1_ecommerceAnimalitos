@@ -133,5 +133,19 @@
     "password": "1234",
     "confirmPass": "1234",
     "id": 13
+  },
+  {
+    "id": 14,
+    "full_name": "Vero",
+    "user_name": "vero",
+    "email": "vero@test.com",
+    "date_of_birth": "01/01/1970",
+    "interes": [
+      "dog",
+      "cat"
+    ],
+    "password": "123456",
+    "userImage": "",
+    "user_type": "admin"
   }
 ]
