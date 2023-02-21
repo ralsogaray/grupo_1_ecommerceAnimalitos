@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <%- include('../partials/productHighlights.ejs', {title: "Productos Destacados", products: productHighlights}) %>
+            <%- include('../partials/productHighlights.ejs', {title: "Accesorios Destacados", products: accessoryHighlights}) %>    
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>
