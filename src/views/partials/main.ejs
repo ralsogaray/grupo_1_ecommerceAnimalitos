@@ -33,60 +33,8 @@
     </section>
     <br>
 
-    <section id="section-productos-destacados">
-        <h2>Productos Destacados</h2>
-        <button class="boton-filtrar-productos">Filtrar</button>
-
-        <div class="cards-productos">
-
-            <% catFood.forEach(catfood=> {%>
-                <article>
-                    <div class="imagen-producto-destacado-container">
-                        <img class="imagen-producto-destacado" src="/images/<%= catfood.image %>"
-                            alt="<%= catfood.description%>">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">
-                            <%= catfood.price%>
-                        </p>
-                        <p class="cards-descripcion-producto">
-                            <%= catfood.name %>
-                        </p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-                <% }) %>
-        </div>
-    </section>
-
-    <section id="section-productos-destacados">
-        <h2>Accesorios Destacados</h2>
-        <button class="boton-filtrar-productos">Filtrar</button>
-
-        <div class="cards-productos">
-            <% dogFood.forEach(dogfood=> {%>
-                <article>
-                    <div class="imagen-producto-destacado-container">
-                        <img class="imagen-producto-destacado" src="/images/<%= dogfood.image %>"
-                            alt="<%= dogfood.description%>">
-                    </div>
-                    <div class="cards-productos-informacion">
-                        <p class="cards-precio-producto">
-                            <%= dogfood.price%>
-                        </p>
-                        <p class="cards-descripcion-producto">
-                            <%= dogfood.name %>
-                        </p>
-                    </div>
-                    <div id="cards-boton-agregarAlCarrito">
-                        <p>Agregar</p>
-                    </div>
-                </article>
-                <% }) %>
-        </div>
-    </section>
+    <%- include('productHighlights.ejs', {title: "Productos Destacados", products: catFood}) %>
+    <%- include('productHighlights.ejs', {title: "Accesorios Destacados", products: dogFood}) %>
 
     <br>
 
