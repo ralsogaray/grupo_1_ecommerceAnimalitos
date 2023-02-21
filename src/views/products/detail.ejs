@@ -1,109 +1,113 @@
-<%- include('../partials/metadata.ejs') %> 
-
-<%- include('../partials/header.ejs') %> 
-    <main>
-        <section class="product-box">
-            <div class="product-main">
-                <article class="product-img">
-                    <div>
-                        <img src="/images/<%= product.image %>  " alt="product-excellent">
-                        <button type="button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                </article>
-                <article class="product-info-main">
-                    <div class="product-info">
-                        <h3> <%= product.name %> </h3>
-                        <p> Referencia: <%= product.name %> </p>
-                        <p class="price-product"> $ <%= product.price %> </p>
-                    </div>
-                    <div class="product-info-chart">
-                        <h4> <%= product.name %> </h4>
-                        <p> <%= product.description %> </p>
-                        <br>
-                        <div class="product-chart">
-                            <div class="number-chart">
-                                <input type="number" value="1" min="1">
-                                <button type="button">
-                                    <i class="fa fa-angle-up"></i>
-                                </button>
-                                <button type="button">
-                                    <i class="fa fa-angle-down"></i>
-                                </button>
-                            </div>                        
-                            <div class="add-chart">
-                                <a href="../cart">
-                                    <button type="submit">
-                                        <i class="fa-sharp fa-solid fa-cart-plus"></i>
-                                        Añadir al carrito 
-                                    </button> 
-                                </a>                                               
-                                <button type="button" alt="Añadir a lista de deseados">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <button type="button" alt="Comparar producto">
-                                    <i class="fa-solid fa-shuffle"></i>
-                                </button>
-                            </div>                        
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <section class="product-box">
+                <div class="product-main">
+                    <article class="product-img">
+                        <div>
+                            <img src="/images/<%= product.image %>  " alt="product-excellent">
+                            <button type="button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                         </div>
-                    </div>
-                    <br>
-                    <div class="product-payment">
-                        <i class="fa-sharp fa-solid fa-credit-card"></i>
-                        <p> ¡PAGOS A TRAVÉS DE MERCADO PAGO
-                            & POSIBILIDAD DE CUOTAS!</p>
-                        <img src="\images\LOGOS-DE-BANCOS.png" alt="LOGOS-DE-BANCOS">
-                    </div>
-                    <br>
-                    <div class="product-shipping">
-                        <p>POR CONSULTAS O DISP. DE STOCK NO DUDE
-                            EN CONTACTARNOS A NUESTRO WHATSAPP</p>
+                    </article>
+                    <article class="product-info-main">
+                        <div class="product-info">
+                            <h3> <%= product.name %> </h3>
+                            <p> Referencia: <%= product.name %> </p>
+                            <p class="price-product"> $ <%= product.price %> </p>
+                        </div>
+                        <div class="product-info-chart">
+                            <h4> <%= product.name %> </h4>
+                            <p> <%= product.description %> </p>
+                            <br>
+                            <div class="product-chart">
+                                <div class="number-chart">
+                                    <input type="number" value="1" min="1">
+                                    <button type="button">
+                                        <i class="fa fa-angle-up"></i>
+                                    </button>
+                                    <button type="button">
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                </div>                        
+                                <div class="add-chart">
+                                    <a href="../cart">
+                                        <button type="submit">
+                                            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+                                            Añadir al carrito 
+                                        </button> 
+                                    </a>                                               
+                                    <button type="button" alt="Añadir a lista de deseados">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                    <button type="button" alt="Comparar producto">
+                                        <i class="fa-solid fa-shuffle"></i>
+                                    </button>
+                                </div>                        
+                            </div>
+                        </div>
                         <br>
-                        <i class="fa-solid fa-truck"></i>
-                        <p>ENVÍOS SIN CARGO A C.A.B.A & ZONA OESTE
-    
-                            (resto del país a cargo del comprador)</p>
+                        <div class="product-payment">
+                            <i class="fa-sharp fa-solid fa-credit-card"></i>
+                            <p> ¡PAGOS A TRAVÉS DE MERCADO PAGO
+                                & POSIBILIDAD DE CUOTAS!</p>
+                            <img src="\images\LOGOS-DE-BANCOS.png" alt="LOGOS-DE-BANCOS">
+                        </div>
                         <br>
-                        <i class="fa-regular fa-credit-card"></i>
-                        <p>Compra mínima $1.500</p>
-                    </div>
-                    <div class="product-socialMedia">
-                        <a href="https://www.whatsapp.com"><img class="logoRedes" src="/images/logoWhatsapp.png"
-                                alt="logo wtsp"></a>
-                        <p>Whatsapp</p>
-                        <a href="https://www.instagram.com"><img class="logoRedes" src="/images/logoIg.png"
-                                alt="logo ig"></a>
-                        <p>Instagram</p>
-                        <a href="https://www.twitter.com"><img class="logoRedes" src="/images/logoTwtr.png"
-                                alt="logo twtr"></a>
-                        <p>Twitter</p>
-                        <a href="https://www.facebook.com"><img class="logoRedes" src="/images/logoFace.png"
-                                alt="logo fb"></a>
-                        <p>Facebook</p>
-                    </div>
-                    <div class="modify-chart">
-                        <a href="../modifyProduct/<%= product.id %>/" >
-                            <button type="submit">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                Editar Producto
-                            </button>
-                        </a>        
-                        <a href="../deleteProduct/<%= product.id %>/">
-                            <button type="submit">
-                                <i class="fa-solid fa-trash"></i>
-                                Borrar Producto
-                            </button>
-                        </a>                    
-                    </div>
-                </article>
-            </div>            
-        </section>
-        <section class="product-description">
-            <br>
-            <h4>Descripcion del producto</h4>
-            <p> <%= product.description %> </p> 
-            <br>
-        </section>
-    </main>
-    <%- include('../partials/footer.ejs') %>
+                        <div class="product-shipping">
+                            <p>POR CONSULTAS O DISP. DE STOCK NO DUDE
+                                EN CONTACTARNOS A NUESTRO WHATSAPP</p>
+                            <br>
+                            <i class="fa-solid fa-truck"></i>
+                            <p>ENVÍOS SIN CARGO A C.A.B.A & ZONA OESTE
+        
+                                (resto del país a cargo del comprador)</p>
+                            <br>
+                            <i class="fa-regular fa-credit-card"></i>
+                            <p>Compra mínima $1.500</p>
+                        </div>
+                        <div class="product-socialMedia">
+                            <a href="https://www.whatsapp.com"><img class="logoRedes" src="/images/logoWhatsapp.png"
+                                    alt="logo wtsp"></a>
+                            <p>Whatsapp</p>
+                            <a href="https://www.instagram.com"><img class="logoRedes" src="/images/logoIg.png"
+                                    alt="logo ig"></a>
+                            <p>Instagram</p>
+                            <a href="https://www.twitter.com"><img class="logoRedes" src="/images/logoTwtr.png"
+                                    alt="logo twtr"></a>
+                            <p>Twitter</p>
+                            <a href="https://www.facebook.com"><img class="logoRedes" src="/images/logoFace.png"
+                                    alt="logo fb"></a>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="modify-chart">
+                            <a href="../modifyProduct/<%= product.id %>/" >
+                                <button type="submit">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                    Editar Producto
+                                </button>
+                            </a>        
+                            <a href="../deleteProduct/<%= product.id %>/">
+                                <button type="submit">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Borrar Producto
+                                </button>
+                            </a>                    
+                        </div>
+                    </article>
+                </div>            
+            </section>
+            <section class="product-description">
+                <br>
+                <h4>Descripcion del producto</h4>
+                <p> <%= product.description %> </p> 
+                <br>
+            </section>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

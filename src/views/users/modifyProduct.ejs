@@ -1,43 +1,42 @@
-<%- include('../partials/metadata.ejs') %>
-
-<body>
-    <%- include('../partials/header.ejs') %>
-
-    <main>
-        <h3 class="titulo">Modificá un Producto</h3>
-        <form method="POST" action="/modifyProduct/<%= product.id %>?_method=PUT" class="formRegistro">
-            <div>
-                <label for="product-name" class="labelForm">Nombre del Producto</label>
-                <input type="text" class="inputRegistro" name="product-name" id="product-name" value="<%= product.name %>" required>
-            </div>
-            <div>
-                <label for="product-description" class="labelForm">Descripción</label>
-                <input type="text" class="inputRegistro" name="product-description" id="product-description" value="<%= product.description %>" required>
-            </div>
-            
-            <div>
-                <label for="category" class="labelForm">Categoría</label>
-                <input type="text" class="inputRegistro" name="category" id="category" value="<%= product.category %>" required>
-            </div>
-
-            <div>
-                <label for="animal-type" class="labelForm">Tipo de Animal</label>
-                <label for="animal-type"><input type="radio" name="animal-type" value="Perro" required checked>Perro</label>
-                <label for="animal-type"><input type="radio" name="animal-type" value="Gato" required>Gato</label>
-            </div>
-
-            <div>
-                <label for="price" class="labelForm">Precio</label>
-                <input type="text" class="inputRegistro" name="price" id="price" value="<%= product.price %>" required>
-            </div>
-
-
-            <div class="buttonContainer">
-                <button type="submit">Editar Producto</button>
-            </div>
-        </form>
-    </main>
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <h3 class="titulo">Modificá un Producto</h3>
+            <form method="POST" action="/modifyProduct/<%= product.id %>?_method=PUT" class="formRegistro">
+                <div>
+                    <label for="product-name" class="labelForm">Nombre del Producto</label>
+                    <input type="text" class="inputRegistro" name="product-name" id="product-name" value="<%= product.name %>" required>
+                </div>
+                <div>
+                    <label for="product-description" class="labelForm">Descripción</label>
+                    <input type="text" class="inputRegistro" name="product-description" id="product-description" value="<%= product.description %>" required>
+                </div>
+                
+                <div>
+                    <label for="category" class="labelForm">Categoría</label>
+                    <input type="text" class="inputRegistro" name="category" id="category" value="<%= product.category %>" required>
+                </div>
     
-
-    <%- include('../partials/footer.ejs') %>
-</body>
+                <div>
+                    <label for="animal-type" class="labelForm">Tipo de Animal</label>
+                    <label for="animal-type"><input type="radio" name="animal-type" value="Perro" required checked>Perro</label>
+                    <label for="animal-type"><input type="radio" name="animal-type" value="Gato" required>Gato</label>
+                </div>
+    
+                <div>
+                    <label for="price" class="labelForm">Precio</label>
+                    <input type="text" class="inputRegistro" name="price" id="price" value="<%= product.price %>" required>
+                </div>
+    
+    
+                <div class="buttonContainer">
+                    <button type="submit">Editar Producto</button>
+                </div>
+            </form>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>
