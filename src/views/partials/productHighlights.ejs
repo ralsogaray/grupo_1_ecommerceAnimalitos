@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div class="cards-product-actions">
-                    <% if(locals.isLogged) { %>
+                    <% if(locals.userIsAdmin) { %>
                         <a href="products/<%=product.id%>" class="btn-card-product">Ver</a>
                     <% } else { %>
                         <button type="button" class="btn-card-product">Agregar</button>
