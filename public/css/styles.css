@@ -479,6 +479,7 @@ div.modify-chart button {
 .cards-productos {
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 
 .cards-productos article {
@@ -487,7 +488,7 @@ div.modify-chart button {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 
-    margin-top: 2rem;
+    /*margin-top: 2rem;*/
 
     box-shadow: 2px -2px 20px -1px rgba(148, 145, 145, 0.75);
     -webkit-box-shadow: 2px -2px 20px -1px rgba(148, 145, 145, 0.75);
@@ -849,7 +850,9 @@ input[type="submit"]:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        margin: 20px;
+        gap: 30px;
+        /*justify-content: space-between;*/
     }
 
     .cards-productos article {

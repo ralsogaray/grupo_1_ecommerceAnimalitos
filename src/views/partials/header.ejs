@@ -13,9 +13,6 @@
             <a href="/" class="logoHeader"><img src="/images/logo-sin-bg.png" class="logoHeader" alt="logo"></a>
         </div>
         <div class="iconContainer">
-            
-
-
             <% if(locals.isLogged) { %>
                 <div >
                     <a href="/profile"><%= locals.user %></a>
@@ -47,6 +44,9 @@
     <div class="headerBottom">
         <nav>
             <ul>
+                <% if(locals.userIsAdmin) { %>
+                    <li><a href="/products/">Productos</a></li>
+                <% } %>
                 <li><a href="">Nosotros</a></li>
                 <li><a href="">Perros</a></li>
                 <li><a href="">Gatos</a></li>
