@@ -21,7 +21,7 @@
                 </div>
                 <div class="cards-product-actions">
                     <% if(locals.isLogged) { %>
-                        <button type="button" class="btn-card-product">Ver</button>
+                        <a href="products/<%=product.id%>" class="btn-card-product">Ver</a>
                     <% } else { %>
                         <button type="button" class="btn-card-product">Agregar</button>
                     <% } %>
