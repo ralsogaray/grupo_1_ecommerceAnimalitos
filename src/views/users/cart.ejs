@@ -1,73 +1,71 @@
-<%- include('../partials/metadata.ejs') %>
-
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
-            <div class="cart-section">
-                <div class="product-list">
-                    <p class="section-heading">Tu Carrito</p>
-                    <div class="cart">
-                        <!--cart product here-->
-                        <div class="sm-product">
-                            <img src="images/AlimentoAdulto.png" class="sm-product-img" alt="">
-                            <div class="sm-text">
-                                <p class="sm-product-name">MARCA</p>
-                                <p class="sm-des">Descripcion del producto</p>
-                            </div>
-                            <div class="item-counter">
-                                <button class="counter-btn decrement">-</button>
-                                <p class="item-count">1</p>
-                                <button class="counter-btn increment">+</button>
-                            </div>
-                            <p class="sm-price">$2000</p>
-                            <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
+        <div class="cart-section">
+            <div class="product-list">
+                <p class="section-heading">Tu Carrito</p>
+                <div class="cart">
+                    <!--cart product here-->
+                    <div class="sm-product">
+                        <img src="images/AlimentoAdulto.png" class="sm-product-img" alt="">
+                        <div class="sm-text">
+                            <p class="sm-product-name">MARCA</p>
+                            <p class="sm-des">Descripcion del producto</p>
                         </div>
-
-                        <div class="sm-product">
-                            <img src="images/AlimentoCachorro.png" class="sm-product-img" alt="">
-                            <div class="sm-text">
-                                <p class="sm-product-name">MARCA</p>
-                                <p class="sm-des">Descripcion del producto</p>
-                            </div>
-                            <div class="item-counter">
-                                <button class="counter-btn decrement">-</button>
-                                <p class="item-count">1</p>
-                                <button class="counter-btn increment">+</button>
-                            </div>
-                            <p class="sm-price">$2700</p>
-                            <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
+                        <div class="item-counter">
+                            <button class="counter-btn decrement">-</button>
+                            <p class="item-count">1</p>
+                            <button class="counter-btn increment">+</button>
                         </div>
-
+                        <p class="sm-price">$2000</p>
+                        <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
                     </div>
-                    <p class="section-heading">Los clientes que adquirieron este producto también compraron:</p>
-                    <div class="sugerencias">
-                        <!--sugerencias cart product here-->
-                        <div class="sm-product">
-                            <img src="images/AlimentoSenior.png" class="sm-product-img" alt="">
-                            <div class="sm-text">
-                                <p class="sm-product-name">MARCA</p>
-                                <p class="sm-des">Descripcion del producto</p>
-                            </div>
-                            <div class="item-counter">
-                                <button class="counter-btn decrement">-</button>
-                                <p class="item-count">1</p>
-                                <button class="counter-btn increment">+</button>
-                            </div>
-                            <p class="sm-price">$2500</p>
-                            <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
+
+                    <div class="sm-product">
+                        <img src="images/AlimentoCachorro.png" class="sm-product-img" alt="">
+                        <div class="sm-text">
+                            <p class="sm-product-name">MARCA</p>
+                            <p class="sm-des">Descripcion del producto</p>
                         </div>
+                        <div class="item-counter">
+                            <button class="counter-btn decrement">-</button>
+                            <p class="item-count">1</p>
+                            <button class="counter-btn increment">+</button>
+                        </div>
+                        <p class="sm-price">$2700</p>
+                        <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
+                    </div>
+
+                </div>
+                <p class="section-heading">Los clientes que adquirieron este producto también compraron:</p>
+                <div class="sugerencias">
+                    <!--sugerencias cart product here-->
+                    <div class="sm-product">
+                        <img src="images/AlimentoSenior.png" class="sm-product-img" alt="">
+                        <div class="sm-text">
+                            <p class="sm-product-name">MARCA</p>
+                            <p class="sm-des">Descripcion del producto</p>
+                        </div>
+                        <div class="item-counter">
+                            <button class="counter-btn decrement">-</button>
+                            <p class="item-count">1</p>
+                            <button class="counter-btn increment">+</button>
+                        </div>
+                        <p class="sm-price">$2500</p>
+                        <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
                     </div>
                 </div>
-                <div class="checkout-section">
-                    <div class="checkout-box">
-                        <p class="text">TOTAL</p>
-                        <h1 class="bill">$00</h1>
-                        <a href="/checkout" class="checkout-btn">Pagar</a>
-                    </div>
-                </div>
-
             </div>
-            <%- include('../partials/footer.ejs') %>
-
+            <div class="checkout-section">
+                <div class="checkout-box">
+                    <p class="text">TOTAL</p>
+                    <h1 class="bill">$00</h1>
+                    <a href="/checkout" class="checkout-btn">Pagar</a>
+                </div>
+            </div>
+        </div>
+        <%- include('../partials/footer.ejs') %>
     </body>
-
-    </html>
+</html>
