@@ -15,7 +15,7 @@ function userLoggedMiddleware(req,res,next){
     if(req.session && req.session.userLogged){
         res.locals.isLogged = true
         res.locals.user = req.session.userLogged.user_name
-        
+        res.locals.userIsAdmin = req.session.userLogged.user_type === "admin"
     }
 
     return next()

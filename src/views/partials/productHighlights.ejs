@@ -1,0 +1,33 @@
+<section class="section-productos-destacados">
+    
+    <% if(title) { %>
+        <h2><%- title %></h2>
+        <button class="boton-filtrar-productos">Filtrar</button>    
+    <% } %>
+
+    <div class="cards-productos">
+        <% products.forEach(product=> {%>
+            <article>
+                <div class="imagen-producto-destacado-container">
+                    <img class="imagen-producto-destacado" src="/images/<%= product.image %>"
+                        alt="<%= product.description%>">
+                </div>
+                <div class="cards-productos-informacion">
+                    <p class="cards-precio-producto">
+                        <%= product.price %>
+                    </p>
+                    <p class="cards-descripcion-producto">
+                        <%= product.name %>
+                    </p>
+                </div>
+                <div class="cards-product-actions">
+                    <% if(locals.userIsAdmin) { %>
+                        <a href="/products/<%=product.id%>" class="btn-card-product">Ver</a>
+                    <% } else { %>
+                        <button type="button" class="btn-card-product">Agregar</button>
+                    <% } %>
+                </div>
+            </article>
+            <% }) %>
+    </div>
+</section>

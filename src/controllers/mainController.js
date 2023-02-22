@@ -5,8 +5,6 @@ const productsFilePath = path.join(__dirname, "../data/products.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, {encoding: 'utf-8'}))
 
 const renderHome = (req,res) => {
-
-    
     const catFood = products.filter(product => product.category == 'catFood')
     const dogFood = products.filter(product => product.category == 'dogFood')
     
