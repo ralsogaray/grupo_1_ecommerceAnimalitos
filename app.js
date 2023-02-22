@@ -30,9 +30,6 @@ const userLoginRouter = require('./src/routers/userLoginRouter');
 const userRegisterRouter = require('./src/routers/userRegisterRouter');
 const cartProducts = require('./src/routers/cartRouter')
 const productsRouter = require('./src/routers/products')
-const modifyProduct = require('./src/routers/modifyProductRouter')
-
-
 
 // find public resources
 app.use(express.static(publicFolderPath));
@@ -54,8 +51,5 @@ app.use(userLoginRouter)
 app.use(userRegisterRouter)
 app.use(cartProducts)
 app.use(productsRouter)
-app.use(modifyProduct)
-
-
 
 //**npx nodemon app.js**//
