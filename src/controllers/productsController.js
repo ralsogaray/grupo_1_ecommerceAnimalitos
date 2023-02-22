@@ -24,19 +24,23 @@ module.exports = {
         })
         },
 
-    create: (req, res) => {
-        return res.render('products/create')
+    new: (req, res) => {
+        return res.render('products/new')
     },
     
-    store: (req, res) =>{
-        const camposNewProduct = req.body;
-        const productJSON = JSON.stringify(camposNewProduct);
-    //camposNewProduct.id = productJSON.length;
+    create: (req, res) =>{
+        console.log(req.body)
+        const params = req.body;
+        console.log(params)
 
-        fs.writeFileSync(productsFilePath, productJSON);
-    
-    //    fs.writefilesync(productsFilePath, JSON.stringify(product));
-    
-    return res.send(camposNewProduct)
+        const newProduct = {
+            id: products.length + 1,
+            image: "alimento-excellent-gatos.png", // TODO: upload image 
+            ...params
+        }
+        products.push(newProduct)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        
+        return res.redirect('/products/')
     },
 }

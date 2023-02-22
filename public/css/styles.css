@@ -570,6 +570,12 @@ div.modify-chart button {
     border-color: #007bff;
 }
 
+.actions {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+
 /* quienes somos index */
 
 .quienes-somos-main {
