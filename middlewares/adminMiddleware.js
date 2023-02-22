@@ -19,6 +19,14 @@ function admMiddleware(req, res, next) {
             return res.redirect('/')
         }
 
+        if (req.path.startsWith("/products/edit/")) {
+            return res.redirect('/')
+        }
+
+        if (["/products/update", "/products/update/"].includes(req.path)) {
+            return res.redirect('/')
+        }
+
         if (req.path.startsWith("/products/delete/")) {
             return res.redirect('/')
         }

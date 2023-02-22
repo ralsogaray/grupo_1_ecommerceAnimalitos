@@ -11,6 +11,9 @@ router.get(`${baseRoute}/`, productsController.index)
 // New product
 router.get(`${baseRoute}/new`, productsController.new)
 router.post(`${baseRoute}/create`, productsController.create)
+// Edit product
+router.get(`${baseRoute}/edit/:productId`, productsController.edit)
+router.post(`${baseRoute}/update`, productsController.update)
 // Delete product
 router.post(`${baseRoute}/delete/:productId/`, productsController.delete)
 
