@@ -6,9 +6,9 @@ const modifyProductController = require('../controllers/modifyProductController'
 
 //** EDIT ONE PRODUCT */
 
-router.get("/modifyProduct/:productId/", modifyProductController.renderModifyProduct.edit)
+// router.get("/modifyProduct/:productId/", modifyProductController.renderModifyProduct.edit)
 // router.get("/deleteProduct/:productId/", modifyProductController.renderModifyProduct.modify)
 // router.delete("/deleteProduct/:productId/", modifyProductController.renderModifyProduct.delete)
-router.put("/modifyProduct/:productId/", modifyProductController.renderModifyProduct.update)
+// router.put("/modifyProduct/:productId/", modifyProductController.renderModifyProduct.update)
 
 module.exports = router
