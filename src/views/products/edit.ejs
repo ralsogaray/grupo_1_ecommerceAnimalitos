@@ -9,12 +9,12 @@
             <form method="POST" action="/products/update/" class="formRegistro">
                 <input type="hidden" name="id" value="<%= product.id %>">
                 <div>
-                    <label for="product-name" class="labelForm">Nombre del Producto</label>
-                    <input type="text" class="inputRegistro" name="product-name" id="product-name" value="<%= product.name %>" required>
+                    <label for="name" class="labelForm">Nombre del Producto</label>
+                    <input type="text" class="inputRegistro" name="name" id="name" value="<%= product.name %>" required>
                 </div>
                 <div>
-                    <label for="product-description" class="labelForm">Descripción</label>
-                    <input type="text" class="inputRegistro" name="product-description" id="product-description" value="<%= product.description %>" required>
+                    <label for="description" class="labelForm">Descripción</label>
+                    <input type="text" class="inputRegistro" name="description" id="description" value="<%= product.description %>" required>
                 </div>
                 
                 <div>
