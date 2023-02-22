@@ -32,18 +32,18 @@ const renderModifyProduct = {
             product: productToFind
         })
     },
-    delete: (req, res) => {
-        const productId = req.params.productId;
-        const productToDelete = products.find(
-            (product) => product.id == productId
-        );
-        if (productToDelete) {
-            const productDeleted = products.filter(product => product.id != productId);
-            const productJson = JSON.stringify(productDeleted);
-            return fs.writeFileSync(productsFilePath, productJson)
-        } else
-            res.render('./products/index.ejs');
-    },
+    // delete: (req, res) => {
+    //     const productId = req.params.productId;
+    //     const productToDelete = products.find(
+    //         (product) => product.id == productId
+    //     );
+    //     if (productToDelete) {
+    //         const productDeleted = products.filter(product => product.id != productId);
+    //         const productJson = JSON.stringify(productDeleted);
+    //         return fs.writeFileSync(productsFilePath, productJson)
+    //     } else
+    //         res.render('./products/index.ejs');
+    // },
     update: (req, res) => {
         const dataToUpdate = req.body;
         const productId = req.params.productId;

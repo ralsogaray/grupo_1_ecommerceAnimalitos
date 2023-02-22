@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 //const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -22,7 +22,7 @@ module.exports = {
         return res.render('products/detail', {
             product: productToFind
         })
-        },
+    },
 
     new: (req, res) => {
         return res.render('products/new')
@@ -43,4 +43,11 @@ module.exports = {
         
         return res.redirect('/products/')
     },
+
+    delete: (req, res) =>{
+        products = products.filter((product) => product.id != req.params.productId)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        
+        return res.redirect('/products/')
+    }
 }

@@ -90,13 +90,14 @@
                                     <i class="fa-solid fa-pen-to-square"></i>
                                     Editar Producto
                                 </button>
-                            </a>        
-                            <a href="../deleteProduct/<%= product.id %>/">
+                            </a>
+                            
+                            <form method="post" action="/products/delete/<%= product.id %>">
                                 <button type="submit">
                                     <i class="fa-solid fa-trash"></i>
                                     Borrar Producto
                                 </button>
-                            </a>                    
+                            </form>
                         </div>
                     </article>
                 </div>            
