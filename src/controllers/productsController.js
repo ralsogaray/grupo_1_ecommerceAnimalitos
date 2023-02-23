@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const dataFile = require('../data/dataFile.js')
 const productsFilePath = path.join(__dirname, "../data/products.json");
-const db = require("..database/models");
+const db = require('../../database/models/');
 
 //const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsDF = dataFile(productsFilePath)
