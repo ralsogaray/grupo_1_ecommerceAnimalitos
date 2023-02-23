@@ -6,31 +6,33 @@ const multer = require('multer');
 
 const baseRoute = '/products'
 
+const storage = multer.diskStorage({
+    destination: function (req,file, cb){
+        cb(null, ("../public/images/products-img"));
+    },
+    filename: function (req, file, cb){
+        const uniqueSuffix = 'product-' + Date.now() + path.extname(file.originalname);
+        cb(null, uniqueSuffix);
+    },
+});
+const upload = multer({storage});
+
 // List products
 router.get(`${baseRoute}/`, productsController.index)
 // New product
 router.get(`${baseRoute}/new`, productsController.new)
-router.post(`${baseRoute}/create`, productsController.create)
+router.post(`${baseRoute}/create`, upload.single('product-image'), productsController.create)
 // Edit product
 router.get(`${baseRoute}/edit/:productId`, productsController.edit)
-router.post(`${baseRoute}/update`, productsController.update)
+router.post(`${baseRoute}/update`, upload.single('product-image'), productsController.update)
 // Delete product
 router.post(`${baseRoute}/delete/:productId/`, productsController.delete)
 
 // Product Detail
 router.get(`${baseRoute}/:productId/`, productsController.detail)
 
-// Guardar imagen
-// const storage = multer.diskStorage({
-//     destination: function (req,file, cb){
-//         cb(null, ("../public/images/products-img"));
-//     },
-//     filename: function (req, file, cb){
-//         const uniqueSuffix = 'product-' + Date.now() + path.extname(file.originalname);
-//         cb(null, uniqueSuffix);
-//     },
-// });
-// const upload = multer({storage});
+//Guardar imagen
+
 
 module.exports = router;
 
