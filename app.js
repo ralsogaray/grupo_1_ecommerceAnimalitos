@@ -24,6 +24,10 @@ const adminMiddleware = require('./middlewares/adminMiddleware')
 app.use(loggedMiddelware)
 app.use(adminMiddleware)
 
+
+// sprint 6
+
+
 //routes required
 const mainRouter = require('./src/routers/mainRouter');
 const userLoginRouter = require('./src/routers/userLoginRouter');
@@ -35,7 +39,6 @@ const productsRouter = require('./src/routers/products')
 app.use(express.static(publicFolderPath));
 
 // ejs 
-//=======
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
 //
