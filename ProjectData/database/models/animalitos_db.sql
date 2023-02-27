@@ -21,7 +21,7 @@ USE `AnimalitosDB` ;
 -- Table `AnimalitosDB`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_users` INT NOT NULL AUTO_INCREMENT,
   `full_name` VARCHAR(45) NOT NULL,
   `user_name` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
@@ -29,8 +29,16 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`users` (
   `password` VARCHAR(45) NOT NULL,
   `userImage` VARCHAR(45) NULL,
   `interes` VARCHAR(45) NULL,
+  `user_type` VARCHAR(45) NULL
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
+
+-- Dumping data for table `Users`
+--
+INSERT INTO users (id_users, full_name, user_name, email, date_of_birth, password, userImage, intereses, user_type) VALUES
+(1,'Rodrigo Alsogaray', 'ralsogaray', 'ralsogaray@hotmail.com', '24/10/1991', '123456', '', 'cat', 'admin'),
+(2,'Pato', 'Solari', 'patriciomsolari@gmail.com', '1989-06-17', '1234', '', 'dog', ''),
+(3,'Vero', 'vero', 'vero@test.com', '01/01/1970', '123456', '', 'dog', 'admin')
 
 
 -- -----------------------------------------------------
@@ -51,11 +59,26 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`products` (
   `id_products` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `price` DOUBLE NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
-  `id_category` INT NOT NULL,
+  `description` VARCHAR(250) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
   `image` VARCHAR(45) NULL
   PRIMARY KEY (`id_products`))
 ENGINE = InnoDB;
+
+--
+-- Dumping data for table `Products`
+--
+INSERT INTO products (id_products, name, price, description, category, image) VALUES
+(1, 'Owl, madagascar hawk', 13591, 'ridiculus mus vivamus', 'dogFood', 'pescado.jpeg'),
+(2, 'Dik Kirks', 1000, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'agility-perro-adulto.jpeg'),
+(3, 'Dik Kirks', 9500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'agility-perro-adulto.jpeg'),
+(4, 'Dik Kirks', 7000, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'AlimentoCachorro.png'),
+(5, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
+(6, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
+(7, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
+(8, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png')
+
+
 
 
 -- -----------------------------------------------------

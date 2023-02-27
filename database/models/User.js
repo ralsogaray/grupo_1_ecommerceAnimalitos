@@ -29,7 +29,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         userImage:{
             type: dataTypes.STRING,
-            allowNull: false
+            allowNull: true
+        },
+        user_type:{
+            type: dataTypes.STRING,
+            alloNull: true
         }
     */}
     const config = {
