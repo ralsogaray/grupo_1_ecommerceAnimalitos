@@ -1,17 +1,17 @@
 module.exports = (sequelize, dataTypes) => {
     const alias = "Products" //nombre de la tabla en plural
     const cols = {
-        /*id:{
+        /*id_products:{
             type: dataTypes.INTERGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        product_name: {
+        name: {
             type: dataTypes.STRING,
             allowNull: false
         },
-        product_description:{
+        description:{
             type: dataTypes.STRING,
             allowNull: false
         },
@@ -19,8 +19,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        category:{
-            type: dataTypes.STRING,
+        id_category:{
+            type: dataTypes.INTERGER,
             allowNull: false
         },
         price:{
