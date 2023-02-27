@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`sales_details` (
   `subTotal` DOUBLE NULL,
   `sales_id` VARCHAR(45) NULL,
   PRIMARY KEY (`sales_detail_id`),
-  INDEX `fk_sales_details_products1_idx` (`id_products` ASC) VISIBLE,
+  INDEX `fk_sales_details_products1_idx` (`id_products` ASC),
   CONSTRAINT `fk_sales_details_products1`
     FOREIGN KEY (`id_products`)
     REFERENCES `AnimalitosDB`.`products` (`id_products`)
@@ -111,8 +111,8 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`sales` (
   `date` DATE NOT NULL,
   `sales_details_id` INT NOT NULL,
   PRIMARY KEY (`id_sales`),
-  INDEX `fk_ventas_usuarios_idx` (`id_users` ASC) VISIBLE,
-  INDEX `fk_ventas_detalle_ventas1_idx` (`sales_details_id` ASC) VISIBLE,
+  INDEX `fk_ventas_usuarios_idx` (`id_users` ASC),
+  INDEX `fk_ventas_detalle_ventas1_idx` (`sales_details_id` ASC),
   CONSTRAINT `fk_ventas_usuarios`
     FOREIGN KEY (`id_users`)
     REFERENCES `AnimalitosDB`.`users` (`id`)
