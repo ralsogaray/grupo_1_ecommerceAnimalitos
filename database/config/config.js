@@ -4,7 +4,8 @@ module.exports = {
     "password": null,
     "database": "animalitosDB",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": "8889"
   },
   "test": {
     "username": "root",

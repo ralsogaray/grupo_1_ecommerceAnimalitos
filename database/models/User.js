@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
     const alias = "Users" //nombre de la tabla en plural
     const cols = {
-        /*id:{
+        /*id_users:{
             type: dataTypes.INTERGER,
             allowNull: false,
             primaryKey: true,
