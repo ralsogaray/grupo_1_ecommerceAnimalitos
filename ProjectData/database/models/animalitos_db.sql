@@ -51,16 +51,10 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`products` (
   `id_products` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `price` DOUBLE NOT NULL,
-  `stock` INT NOT NULL,
+  `description` VARCHAR(45) NOT NULL,
   `id_category` INT NOT NULL,
-  `image` VARCHAR(45) NULL,
-  PRIMARY KEY (`id_products`),
-  INDEX `fk_productos_categorias1_idx` (`id_category` ASC) VISIBLE,
-  CONSTRAINT `fk_productos_categorias1`
-    FOREIGN KEY (`id_category`)
-    REFERENCES `AnimalitosDB`.`product_categories` (`id_categorias`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `image` VARCHAR(45) NULL
+  PRIMARY KEY (`id_products`))
 ENGINE = InnoDB;
 
 

@@ -7,15 +7,15 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        product-name: {
+        product_name: {
             type: dataTypes.STRING,
             allowNull: false
         },
-        product-description:{
+        product_description:{
             type: dataTypes.STRING,
             allowNull: false
         },
-        animal-type:{
+        animal_type:{
             type: dataTypes.STRING,
             allowNull: false
         },

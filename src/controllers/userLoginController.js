@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt')
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
 
-
+const db = require('../../database/models/');
 
 
 const renderLogin = (req,res) => {
@@ -13,6 +13,47 @@ const renderLogin = (req,res) => {
 }
 
 const processLogin = (req, res) =>{
+    
+    /* agregar await 
+    
+    
+    try{
+        const data = req.body
+
+        const userToFind =  const userToLogin = await db.Users.findOne({where:{email:data.email}})
+
+
+        if(userToFind == undefined){
+        return res.render("users/login.ejs", {
+            errors: {
+                email: {
+                    msg: 'Las credenciales son incorrectas'
+                } 
+            }
+        })
+    }
+    else if(data.password == userToFind.password && data.email == userToFind.email){
+        req.session.userLogged = userToFind
+        userLogged = req.session.userLogged
+        
+        //console.log( data.recordame )
+
+        if(data.recordame == "on"){
+            //console.log( data.recordame )
+            res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
+            console.log(req.cookies.userEmail)
+        }
+        return res.redirect("profile")
+    }
+
+    } catch(error){
+        console.log(error)
+        res.render('algo salió mal')
+    }
+    
+    */ 
+    
+    
     const data = req.body
     
     const userToFind = users.find(
