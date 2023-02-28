@@ -21,7 +21,7 @@ USE `AnimalitosDB` ;
 -- Table `AnimalitosDB`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`users` (
-  `id_users` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `full_name` VARCHAR(45) NOT NULL,
   `user_name` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
@@ -30,12 +30,12 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`users` (
   `userImage` VARCHAR(45) NULL,
   `interes` VARCHAR(45) NULL,
   `user_type` VARCHAR(45) NULL,
-  PRIMARY KEY (`id_users`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 -- Dumping data for table `Users`
 --
-INSERT INTO users (id_users, full_name, user_name, email, date_of_birth, password, userImage, interes, user_type) VALUES
+INSERT INTO users (id, full_name, user_name, email, date_of_birth, password, userImage, interes, user_type) VALUES
 (1,'Rodrigo Alsogaray', 'ralsogaray', 'ralsogaray@hotmail.com', '1991-10-24', '123456', '', 'cat', 'admin'),
 (2,'Pato', 'Solari', 'patriciomsolari@gmail.com', '1989-06-17', '1234', '', 'dog', ''),
 (3,'Vero', 'vero', 'vero@test.com', '1970-10-06', '123456', '', 'dog', 'admin');
@@ -46,19 +46,19 @@ INSERT INTO users (id_users, full_name, user_name, email, date_of_birth, passwor
 -- Table `AnimalitosDB`.`products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`products` (
-  `id_products` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `price` DOUBLE NOT NULL,
   `description` VARCHAR(250) NOT NULL,
   `category` VARCHAR(45) NOT NULL,
   `image` VARCHAR(45) NULL,
-  PRIMARY KEY (`id_products`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 --
 -- Dumping data for table `Products`
 --
-INSERT INTO products (id_products, name, price, description, category, image) VALUES
+INSERT INTO products (id, name, price, description, category, image) VALUES
 (1, 'Owl, madagascar hawk', 13591, 'ridiculus mus vivamus', 'dogFood', 'pescado.jpeg'),
 (2, 'Dik Kirks', 1000, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'agility-perro-adulto.jpeg'),
 (3, 'Dik Kirks', 9500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'agility-perro-adulto.jpeg'),

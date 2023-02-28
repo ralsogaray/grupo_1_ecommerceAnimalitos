@@ -1,12 +1,10 @@
+const {sequelize, dataTypes} = require('sequelize')
+
+
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Users" //nombre de la tabla en plural
-    const cols = {
-        /*id_users:{
-            type: dataTypes.INTERGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
+    
+    const Users = sequelize.define('Users', {
+
         full_name: {
             type: dataTypes.STRING,
             allowNull: false
@@ -33,16 +31,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         user_type:{
             type: dataTypes.STRING,
-            alloNull: true
+            allowNull: true
         }
-    */}
-    const config = {
-        tableName: "users",
-        timestamps: false
-    }
+    },
+        {timestamps: false}
+    )
 
-    const User = sequelize.define(alias, cols, config)
-
-
-    return User
+    return Users
 }

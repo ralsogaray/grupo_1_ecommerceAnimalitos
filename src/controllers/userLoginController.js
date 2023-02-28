@@ -8,15 +8,16 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
 const db = require('../../database/models/');
 
 
-const renderLogin = (req,res) => {
+const renderLogin = async (req,res) => {
+    
     return res.render('users/login.ejs')
 }
 
 const processLogin = (req, res) =>{
     
-    /* agregar await 
+    /* agregar async
     
-    
+    const usersDB = await db.Users.findAll()
     try{
         const data = req.body
 
@@ -85,8 +86,9 @@ const processLogin = (req, res) =>{
 
 }
 
-const renderProfile = (req, res) =>{
-    console.log(req.cookies.userEmail)
+const renderProfile = async (req, res) =>{
+    
+    //console.log(req.cookies.userEmail)
     res.render('users/profile.ejs')
 }
 
