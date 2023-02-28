@@ -29,27 +29,17 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`users` (
   `password` VARCHAR(45) NOT NULL,
   `userImage` VARCHAR(45) NULL,
   `interes` VARCHAR(45) NULL,
-  `user_type` VARCHAR(45) NULL
-  PRIMARY KEY (`id`))
+  `user_type` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_users`))
 ENGINE = InnoDB;
 
 -- Dumping data for table `Users`
 --
-INSERT INTO users (id_users, full_name, user_name, email, date_of_birth, password, userImage, intereses, user_type) VALUES
-(1,'Rodrigo Alsogaray', 'ralsogaray', 'ralsogaray@hotmail.com', '24/10/1991', '123456', '', 'cat', 'admin'),
+INSERT INTO users (id_users, full_name, user_name, email, date_of_birth, password, userImage, interes, user_type) VALUES
+(1,'Rodrigo Alsogaray', 'ralsogaray', 'ralsogaray@hotmail.com', '1991-10-24', '123456', '', 'cat', 'admin'),
 (2,'Pato', 'Solari', 'patriciomsolari@gmail.com', '1989-06-17', '1234', '', 'dog', ''),
-(3,'Vero', 'vero', 'vero@test.com', '01/01/1970', '123456', '', 'dog', 'admin')
+(3,'Vero', 'vero', 'vero@test.com', '1970-10-06', '123456', '', 'dog', 'admin');
 
-
--- -----------------------------------------------------
--- Table `AnimalitosDB`.`product_categories`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`product_categories` (
-  `id_categorias` INT NOT NULL AUTO_INCREMENT,
-  `cats` VARCHAR(45) NOT NULL,
-  `dogs` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id_categorias`))
-ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -61,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`products` (
   `price` DOUBLE NOT NULL,
   `description` VARCHAR(250) NOT NULL,
   `category` VARCHAR(45) NOT NULL,
-  `image` VARCHAR(45) NULL
+  `image` VARCHAR(45) NULL,
   PRIMARY KEY (`id_products`))
 ENGINE = InnoDB;
 
@@ -76,54 +66,8 @@ INSERT INTO products (id_products, name, price, description, category, image) VA
 (5, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
 (6, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
 (7, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
-(8, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png')
+(8, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png');
 
-
-
-
--- -----------------------------------------------------
--- Table `AnimalitosDB`.`sales_details`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`sales_details` (
-  `sales_detail_id` INT NOT NULL AUTO_INCREMENT,
-  `id_products` INT NOT NULL,
-  `id_sales` INT NULL,
-  `amount` INT NULL,
-  `price` DOUBLE NULL,
-  `subTotal` DOUBLE NULL,
-  `sales_id` VARCHAR(45) NULL,
-  PRIMARY KEY (`sales_detail_id`),
-  INDEX `fk_sales_details_products1_idx` (`id_products` ASC),
-  CONSTRAINT `fk_sales_details_products1`
-    FOREIGN KEY (`id_products`)
-    REFERENCES `AnimalitosDB`.`products` (`id_products`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `AnimalitosDB`.`sales`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`sales` (
-  `id_sales` INT NOT NULL AUTO_INCREMENT,
-  `id_users` INT NOT NULL,
-  `date` DATE NOT NULL,
-  `sales_details_id` INT NOT NULL,
-  PRIMARY KEY (`id_sales`),
-  INDEX `fk_ventas_usuarios_idx` (`id_users` ASC),
-  INDEX `fk_ventas_detalle_ventas1_idx` (`sales_details_id` ASC),
-  CONSTRAINT `fk_ventas_usuarios`
-    FOREIGN KEY (`id_users`)
-    REFERENCES `AnimalitosDB`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ventas_detalle_ventas1`
-    FOREIGN KEY (`sales_details_id`)
-    REFERENCES `AnimalitosDB`.`sales_details` (`sales_detail_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

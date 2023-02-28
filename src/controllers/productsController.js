@@ -10,17 +10,8 @@ const productsDF = dataFile(productsFilePath)
 module.exports = {
     index: (req, res) => {
 
-        /* AGREGAR EL AWAIT ANTES DE (req, res)
-        try{
-            const products = await db.Products.findAll()
-            return res.render('products/index', {products})
-        }catch(error){
-            console.log(error)
-            res.send('algo anda mal!')
-        } */
-        
-
-
+    
+    
         const products = productsDF.list()
         return res.render('products/index', {products})
     },

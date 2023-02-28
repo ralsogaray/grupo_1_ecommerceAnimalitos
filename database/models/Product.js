@@ -1,12 +1,10 @@
+const {sequelize, dataTypes} = require('sequelize')
+
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Products" //nombre de la tabla en plural
-    const cols = {
-        /*id_products:{
-            type: dataTypes.INTERGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
+    //const alias = "Products" //nombre de la tabla en plural
+
+    const Products = sequelize.define('Products', {
+        
         name: {
             type: dataTypes.STRING,
             allowNull: false
@@ -15,30 +13,31 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        animal_type:{
+        category:{
             type: dataTypes.STRING,
             allowNull: false
         },
-        id_category:{
-            type: dataTypes.INTERGER,
-            allowNull: false
-        },
         price:{
-            type: dataTypes.INTERGER,
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         image:{
             type: dataTypes.STRING,
             allowNull: false
         }
-    */}
-    const config = {
-        tableName: "product",
-        timestamps: false
-    }
+    },
+     {timestamps: false}
+    )
 
-    const Product = sequelize.define(alias, cols, config)
+    return Products
 
+    //const config = {
+    //    tableName: "products",
+    //    timestamps: false
+    //}
 
-    return Product
+    //const Product = sequelize.define(alias, cols, config
+
+    
+    
 }
