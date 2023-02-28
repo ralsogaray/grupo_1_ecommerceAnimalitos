@@ -6,42 +6,24 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, {encoding: 'utf-8'
 
 const db = require('../../database/models/');
 
-const renderHome =  async (req,res) => {
+const renderHome = async(req,res) => {
 
-     
-        try{
-            // todos los productos
-            const products = await db.Products.findAll()
-            console.log(products)
-            res.send('Funciona Xime!!!!')
-            //productos filtrados
-            
-            /*const catFood = products.filter(product => product.category == 'catFood')
-            const dogFood = products.filter(product => product.category == 'dogFood')
-            const viewProducts = {
+    try {
+        const productsDB = await db.Products.findAll()
+        const catFood = productsDB.filter(product => product.category == 'catFood')
+        const dogFood = productsDB.filter(product => product.category == 'dogFood')
+
+        const viewProducts = {
                 catFood,
                 dogFood
-             }
+            }
+        //res.send(viewProducts)
+        return res.render('index.ejs', viewProducts) 
 
-            //return  res.send(viewProducts)
-            return res.render('index.ejs', viewProducts)*/
-            
-        }catch(error){
-            console.log(error)
-            res.send('algo anda mal!')
-        } 
-
-/*
-    const catFood = products.filter(product => product.category == 'catFood')
-    const dogFood = products.filter(product => product.category == 'dogFood')
-    
-    const viewProducts = {
-        catFood,
-        dogFood
+    } catch (error) {
+        res.send('error!')
     }
-
-    //return  res.send(viewProducts)
-    return res.render('index.ejs', viewProducts) */
+    
 }
 
 module.exports = {
