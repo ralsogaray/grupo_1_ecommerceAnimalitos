@@ -14,10 +14,9 @@ module.exports = {
         const { id, full_name, user_name, email, date_of_birth, password, userImage, interes, user_type } = req.body;
     
         try {
-          // Generar hash de la contraseña
+          
           const hashedPassword = await bcrypt.hashSync(password, 10);
     
-          // Crear un nuevo usuario en la base de datos
           await db.Users.create({
             id,
             full_name,
@@ -30,10 +29,9 @@ module.exports = {
             user_type
           });
     
-          // Redireccionar al usuario a pagina de login
           return res.render('users/login.ejs')
         } catch (error) {
-          // Mostrar mensaje de error al usuario
+          
           return res.render('users/register', { error: error.message });
        
     } /*,
