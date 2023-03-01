@@ -8,11 +8,20 @@ const db = require('../../database/models/');
 const productsDF = dataFile(productsFilePath)
 
 module.exports = {
-    index: (req, res) => {
+    index: async (req, res) => {
+        
 
-    
-    
+       /* try {
+            const products = await db.Products.findAll()
+            return res.render('products/index', {products})
+
+        } catch (error) {
+            console.log(error)
+            res.send('No funcionó')
+        }*/
+        
         const products = productsDF.list()
+        
         return res.render('products/index', {products})
     },
 
