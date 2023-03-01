@@ -59,12 +59,12 @@ ENGINE = InnoDB;
 -- Dumping data for table `Products`
 --
 INSERT INTO products (id, name, price, description, category, image) VALUES
-(1, 'Owl, madagascar hawk', 13591, 'ridiculus mus vivamus', 'dogFood', 'pescado.jpeg'),
+(1, 'Owl, madagascar hawk', 13591, 'ridiculus mus vivamus', 'dogFood', 'alimento-excellent-gatos.png'),
 (2, 'Dik Kirks', 1000, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'agility-perro-adulto.jpeg'),
-(3, 'Dik Kirks', 9500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'agility-perro-adulto.jpeg'),
+(3, 'Dik Kirks', 9500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'AlimentoAdulto.png'),
 (4, 'Dik Kirks', 7000, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'dogFood', 'AlimentoCachorro.png'),
-(5, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
-(6, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
+(5, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoSenior.png'),
+(6, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoSenior.png'),
 (7, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png'),
 (8, 'Woodcock, american', 1500, 'non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque', 'catFood', 'AlimentoCachorro.png');
 
