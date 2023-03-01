@@ -30,10 +30,12 @@ const processLogin = async (req, res) =>{
                 }
             })
         }
-        else if(data.password == userToFind.password && data.email == userToFind.email){
+    
+        
+        if(data.password == userToFind.password && data.email == userToFind.email ){
             req.session.userLogged = userToFind
             userLogged = req.session.userLogged
-        
+            
             //console.log( data.recordame )
 
             if(data.recordame == "on"){
@@ -42,8 +44,10 @@ const processLogin = async (req, res) =>{
                 console.log(req.cookies.userEmail)
             }
 
-        return res.redirect("profile")
+            return res.redirect("profile")
         }
+
+
 
     } catch(error){
         console.log(error)

@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`users` (
   `user_name` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `date_of_birth` DATE NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(80) NOT NULL,
   `userImage` VARCHAR(45) NULL,
   `interes` VARCHAR(45) NULL,
   `user_type` VARCHAR(45) NULL,
