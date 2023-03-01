@@ -10,14 +10,33 @@ module.exports = {
         return res.render('users/register.ejs')
     
     },
-    register: (req, res) =>{
-        const camposNewUser = req.body;
-        const saltrounds = 10;
-        camposNewUser.password = bcrypt.hashSync(camposNewUser.password, saltrounds)
-        camposNewUser.id = users.length + 1;
-        users.push(camposNewUser)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
+    register: async (req, res) => {
+        const { id, full_name, user_name, email, date_of_birth, password, userImage, interes, user_type } = req.body;
+    
+        try {
+          
+          const hashedPassword = await bcrypt.hashSync(password, 10);
+    
+          await db.Users.create({
+            id,
+            full_name,
+            user_name,
+            email,
+            date_of_birth,
+            password: hashedPassword,
+            userImage,
+            interes,
+            user_type
+          });
+    
+          return res.render('users/login.ejs')
+        } catch (error) {
+          
+          return res.render('users/register', { error: error.message });
        
-    return res.redirect('./');
-    }
+    } /*,
+    delete: (req, res) => {
+
+    }*/
+ }
 };

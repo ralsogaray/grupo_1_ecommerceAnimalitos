@@ -3,6 +3,7 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 const path = require('path');
 const multer = require('multer');
+const productValidation = require('../validations/userValidation')
 
 const baseRoute = '/products'
 
@@ -21,10 +22,10 @@ const upload = multer({storage});
 router.get(`${baseRoute}/`, productsController.index)
 // New product
 router.get(`${baseRoute}/new`, productsController.new)
-router.post(`${baseRoute}/create`, upload.single('product-image'), productsController.create)
+router.post(`${baseRoute}/create`, upload.single('product-image'), productValidation.productCreate, productsController.create)
 // Edit product
 router.get(`${baseRoute}/edit/:productId`, productsController.edit)
-router.post(`${baseRoute}/update`, upload.single('product-image'), productsController.update)
+router.post(`${baseRoute}/update`, upload.single('product-image'), productValidation.productCreate, productsController.update)
 // Delete product
 router.post(`${baseRoute}/delete/:productId/`, productsController.delete)
 
