@@ -9,8 +9,10 @@
         <% products.forEach(product=> {%>
             <article>
                 <div class="imagen-producto-destacado-container">
-                    <img class="imagen-producto-destacado" src="/images/<%= product.image %>"
-                        alt="<%= product.description%>">
+                    <a href="/products/<%= product.id %>"><img src="<%= product.imagen %>">
+                        <img class="imagen-producto-destacado" src="/images/<%= product.image %>"
+                            alt="<%= product.description%>">
+                    </a>
                 </div>
                 <div class="cards-productos-informacion">
                     <p class="cards-precio-producto">
