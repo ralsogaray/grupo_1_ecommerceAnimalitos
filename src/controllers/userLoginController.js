@@ -25,14 +25,14 @@ const processLogin = async (req, res) =>{
             return res.render("users/login.ejs", {
                 errors: {
                     email: {
-                        msg: 'Las credenciales son incorrectas'
+                        msg: 'El correo electrónico no se encuentra registrado'
                     } 
                 }
             })
         }
     
         
-        if(data.password == userToFind.password && data.email == userToFind.email ){
+        if(data.password == userToFind.password && data.email == userToFind.email && userToFind.user_type == "admin" ){
             req.session.userLogged = userToFind
             userLogged = req.session.userLogged
             
@@ -46,6 +46,38 @@ const processLogin = async (req, res) =>{
 
             return res.redirect("profile")
         }
+
+        if(userToFind){
+            const okForLogging = bcrypt.compareSync(data.password, userToFind.password)
+            //res.send(okForLogging)
+
+            if(okForLogging){
+                
+                req.session.userLogged = userToFind
+                userLogged = req.session.userLogged
+            
+                //console.log( data.recordame )
+
+                if(data.recordame == "on"){
+                    //console.log( data.recordame )
+                    res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
+                    //console.log(req.cookies.userEmail)
+                    
+                }
+                return res.redirect("profile")
+            }
+            return res.render("users/login.ejs", {
+                errors: {
+                    email: {
+                        msg: 'Contraseña Incorrecta'
+                    } 
+                }
+            })
+
+            
+        }
+
+
 
 
 

@@ -1,15 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-
-//const usersFilePath = path.join(__dirname, "../data/users.json");
-//const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
+const db = require('../database/models/')
 
 
 
-function userLoggedMiddleware(req,res,next){
+function  userLoggedMiddleware(req,res,next){
     res.locals.isLogged = false
     //console.log("chau middel")
+
     
     
     if(req.session && req.session.userLogged){
@@ -19,18 +18,8 @@ function userLoggedMiddleware(req,res,next){
     }
 
     return next()
- /*
-    const emailInCookie = req.cookies.userEmail
-    const userFromCookie = users.find(user => user.email == emailInCookie)
+ 
 
-    if(userFromCookie){
-        req.session.userLogged=userFromCookie
-    }
-
-    if(req.session.userLogged){
-        res.locals.isLogged=true
-        res.locals.userLogged=req.session.userLogged
-    }*/
 
     
 }
