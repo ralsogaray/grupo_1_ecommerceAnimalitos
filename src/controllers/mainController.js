@@ -21,6 +21,7 @@ const renderHome = async(req,res) => {
         return res.render('index.ejs', viewProducts) 
 
     } catch (error) {
+
         res.send('error!')
     }
     
