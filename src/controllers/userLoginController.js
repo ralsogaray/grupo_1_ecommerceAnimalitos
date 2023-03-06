@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcrypt')
+const {validationResult } = require("express-validator")
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
 //const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
@@ -14,23 +15,23 @@ const renderLogin = async (req,res) => {
 }
 
 const processLogin = async (req, res) =>{
-    
-    try{
 
+    const resultValidation = validationResult(req) 
+    
+    console.log(resultValidation.errors.length > 0)
+    try{
+        if(resultValidation.errors.length > 0){
+            
+            return res.render("users/login.ejs", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })}
+        
+        
         const data = req.body
         const userToFind = await db.Users.findOne({where:{email:data.email}})
         //res.send(userToFind)
         
-        if(userToFind == undefined){
-            return res.render("users/login.ejs", {
-                errors: {
-                    email: {
-                        msg: 'El correo electrónico no se encuentra registrado'
-                    } 
-                }
-            })
-        }
-    
         
         if(data.password == userToFind.password && data.email == userToFind.email && userToFind.user_type == "admin" ){
             req.session.userLogged = userToFind
@@ -68,18 +69,13 @@ const processLogin = async (req, res) =>{
             }
             return res.render("users/login.ejs", {
                 errors: {
-                    email: {
+                    password: {
                         msg: 'Contraseña Incorrecta'
                     } 
                 }
             })
 
-            
         }
-
-
-
-
 
     } catch(error){
         console.log(error)

@@ -12,7 +12,7 @@ const guestMiddleware = require('../../middlewares/guestMiddelware');
 
 
 router.get("/login", guestMiddleware, userLoginController.renderLogin)
-router.post("/login",  /*userValidation.loginFormValidations,*/ userLoginController.processLogin)
+router.post("/login",  userValidation.loginFormValidations, userLoginController.processLogin)
 router.get('/profile', userLoginMiddleware,  userLoginController.renderProfile)
 
 router.get('/logout', userLoginController.logOut)

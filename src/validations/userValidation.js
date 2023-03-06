@@ -59,7 +59,7 @@ const userValidation = {
     ],
     loginFormValidations: [
         check('email')
-            .notEmpty().withMessage('Ingrese un mail').bail()
+            .notEmpty().withMessage('Ingrese un email').bail()
             .isEmail().withMessage('Ingrese un mail válido')
             .custom(async (value, { req }) => {
                 const userToLogin = await db.Users.findOne({ where: { email: req.body.email } })
@@ -72,18 +72,23 @@ const userValidation = {
             .notEmpty().withMessage('Ingrese una contraseña')
             .custom(async (value, { req }) => {
                 const userToLogin = await db.Users.findOne({ where: { email: req.body.email } })
-                if (!bcrypt.compareSync(req.body.password, userToLogin.password)) {
+                //console.log(userToLogin.dataValues.password)
+                //console.log(userToLogin.password)
+                console.log(req.body.password)
+                /*if (userToLogin.user_type == "admin" && req.body.password != userToLogin.password){
                     throw new Error('Contraseña inválida')
-                }
-                return true
-            }),
+                } else if (!bcrypt.compareSync(req.body.password, userToLogin.password)){
+                    throw new Error('Contraseña inválida')
+                } 
+                return true*/
+            })/*,
             (req, res, next) => {
                 const errors = validationResult(req);
                 if (!errors.isEmpty()) {
                     return res.status(400).json({ errors: errors.array() });
                 }
                 next();
-                }
+                }*/
 
     ],
 

@@ -7,7 +7,10 @@
             <form method="post" action="/login" class="formRegistro">
                 <div class="text-field">
                     <div><h3 class="center">Ingresá a tu Cuenta</h3></div>
-                    <input type="text" name="email" required>
+                    <input type="text" 
+                    name="email" 
+                    class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null  %>"
+                    value="<%= locals.oldData ? oldData.email : null %>">
                     <span></span>
                     <label>Correo Electrónico</label>
                 </div>
@@ -18,11 +21,23 @@
                     </div>
                 <% } %>
 
+                
+
                 <div class="text-field">
-                    <input type="password" name="password" required>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %>" 
+                    value="<%= locals.oldData ? oldData.password : null %>">
                     <span></span>
                     <label>Contraseña</label>
                 </div>
+                <% if(locals.errors && errors.password){ %>
+                    <div style="color: red;"></div>
+                        <p style="color: red;"><%= errors.password.msg %></p>
+                    </div>
+                    <br>
+                <% } %>
 
                 <div >
                     <input type="checkbox" name="recordame" id="loginRecordame">
