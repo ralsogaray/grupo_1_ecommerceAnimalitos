@@ -18,7 +18,7 @@ const processLogin = async (req, res) =>{
 
     const resultValidation = validationResult(req) 
     
-    console.log(resultValidation.errors.length > 0)
+    
     try{
         if(resultValidation.errors.length > 0){
             

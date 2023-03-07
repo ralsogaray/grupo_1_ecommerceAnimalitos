@@ -10,8 +10,8 @@ const productsDF = dataFile(productsFilePath)
 module.exports = {
     index: async (req, res) => {
         
-
-       /* try {
+        /*
+        try {
             const products = await db.Products.findAll()
             return res.render('products/index', {products})
 
