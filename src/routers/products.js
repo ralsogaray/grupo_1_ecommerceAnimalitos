@@ -22,7 +22,7 @@ const upload = multer({storage});
 router.get(`${baseRoute}/`, productsController.index)
 // New product
 router.get(`${baseRoute}/new`, productsController.new)
-router.post(`${baseRoute}/create`, upload.single('product-image'), /*productValidation.productCreate,*/ productsController.create)
+router.post(`${baseRoute}/create`, upload.single('image'), /*productValidation.productCreate,*/ productsController.create)
 // Edit product
 router.get(`${baseRoute}/edit/:productId`, productsController.edit)
 router.post(`${baseRoute}/update`, upload.single('product-image'), /*productValidation.productCreate,*/ productsController.update)

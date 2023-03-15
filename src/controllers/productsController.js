@@ -10,7 +10,7 @@ const productsDF = dataFile(productsFilePath)
 module.exports = {
     index: async (req, res) => {
         
-        /*
+        
         try {
             const products = await db.Products.findAll()
             return res.render('products/index', {products})
@@ -18,32 +18,54 @@ module.exports = {
         } catch (error) {
             console.log(error)
             res.send('No funcionó')
-        }*/
-        
-        const products = productsDF.list()
-        
-        return res.render('products/index', {products})
+        }
+       
     },
 
-    detail: (req, res) => {
-        const product = productsDF.get(req.params.productId)
+    detail: async (req, res) => {
         
-        if(!product) {
-            return res.send('No existe ese producto')
-        }
+        
+        try {
+            const productToFind = req.params.productId
+            const product = await db.Products.findOne({where:{id:productToFind}})
+            //console.log(product.name)
+            if(!product) {
+                return res.send('No existe ese producto')
+            }
+            return res.render('products/detail', { product })
 
-        return res.render('products/detail', { product })
+        } catch (error) {
+            console.log(error)
+            res.send('error! mirá la consola!')
+        }
+        
+        
     },
 
     new: (req, res) => {
         return res.render('products/new')
     },
     
-    create: (req, res) =>{
-        const params = req.body;
-        productsDF.create(params)
+    create: async (req, res) =>{
+        //const {name, price, description, category, image} = req.body;
+        //res.send(req.body)
         
-        return res.redirect('/products/')
+        try {
+            await db.Products.create({
+                name: req.body.name, 
+                price: req.body.price, 
+                description: req.body.description,
+                category: req.body.category, 
+                image: req.body.image})
+            return res.redirect('/products/')
+        } catch (error) {
+            console.log(error)
+            res.send(error)
+        }
+        //productsDF.create(params)
+        
+        
+        
     },
 
     edit: (req, res) => {
