@@ -68,14 +68,21 @@ module.exports = {
         
     },
 
-    edit: (req, res) => {
-        const product = productsDF.get(req.params.productId)
+    edit: async (req, res) => {
 
-        if(!product){
-            return res.redirect('/products/') 
+        try {
+            const product = await db.Products.findByPk(req.params.productId)
+            //res.send(product)
+
+            if(!product){
+                return res.redirect('/products/')
+            }
+            res.render('products/edit', { product: product })
+        } catch (error) {
+            res.send(error)
         }
         
-        res.render('products/edit', { product: product })
+    
     },
 
     update: (req, res) => {
