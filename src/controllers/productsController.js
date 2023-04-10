@@ -106,8 +106,22 @@ module.exports = {
         return res.redirect('/products/')
     },
 
-    delete: (req, res) =>{
-        productsDF.delete(req.params.productId)
+    delete: async (req, res) =>{
+        
+        try {
+            await db.Products.destroy({
+                where:{
+                    id: req.params.productId
+                }
+            })
+        } catch (error) {
+            res.send(error)
+        }
+
+
+        
+
+        //productsDF.delete(req.params.productId)
         
         return res.redirect('/products/')
     }
