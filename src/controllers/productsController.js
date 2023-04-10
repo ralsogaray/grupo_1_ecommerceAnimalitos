@@ -85,9 +85,23 @@ module.exports = {
     
     },
 
-    update: (req, res) => {
-        const params = req.body;
-        productsDF.update(params.id, params)
+    update: async (req, res) => {
+        
+        try{
+            await db.Products.update({
+                name: req.body.name, 
+                price: req.body.price, 
+                description: req.body.description,
+                category: req.body.category, 
+                image: req.body.image},
+                    {where: {
+                        id: req.params.productId
+                    }}
+                )
+
+        } catch(error){
+            res.send(error)
+        }
         
         return res.redirect('/products/')
     },

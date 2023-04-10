@@ -6,7 +6,7 @@
         <%- include('../partials/header.ejs') %>
         <main>
             <h3 class="titulo">Modificá un Producto</h3>
-            <form method="POST" action="/products/update/" class="formRegistro">
+            <form method="POST" action="/products/update/<%= product.id %>" class="formRegistro">
                 <input type="hidden" name="id" value="<%= product.id %>">
                 <div>
                     <label for="name" class="labelForm">Nombre del Producto</label>
