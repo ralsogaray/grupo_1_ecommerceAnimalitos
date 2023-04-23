@@ -47,8 +47,7 @@ module.exports = {
     },
     
     create: async (req, res) =>{
-        //const {name, price, description, category, image} = req.body;
-        //res.send(req.body)
+        
         
         try {
             await db.Products.create({
