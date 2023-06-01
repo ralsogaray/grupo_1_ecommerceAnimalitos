@@ -3,6 +3,7 @@ const path = require("path");
 const dataFile = require('../data/dataFile.js')
 const productsFilePath = path.join(__dirname, "../data/products.json");
 const db = require('../../database/models/');
+const {validationResult } = require("express-validator")
 
 //const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsDF = dataFile(productsFilePath)
@@ -19,7 +20,7 @@ module.exports = {
             console.log(error)
             res.send('No funcionó')
         }
-       
+    
     },
 
     detail: async (req, res) => {
@@ -47,8 +48,17 @@ module.exports = {
     },
     
     create: async (req, res) =>{
-        
-        
+
+        //return res.send(req.body)
+        const resultValidation = validationResult(req) 
+
+        if(resultValidation.errors.length > 0){
+            
+            return res.render("products/new.ejs", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })}
+
         try {
             await db.Products.create({
                 name: req.body.name, 
@@ -116,12 +126,6 @@ module.exports = {
         } catch (error) {
             res.send(error)
         }
-
-
-        
-
-        //productsDF.delete(req.params.productId)
-        
         return res.redirect('/products/')
     }
 }

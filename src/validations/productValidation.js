@@ -7,7 +7,7 @@ const productValidation = {
         check('name')
             .notEmpty()
             .withMessage('Agregar nombre del producto.').bail()
-            .isLength({min:5, max:50})
+            .isLength({min:5, max:30})
             .withMessage('El nombre debe tener un minimo de cinco letras.'),
         check('price')
             .notEmpty()

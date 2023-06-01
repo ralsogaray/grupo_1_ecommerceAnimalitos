@@ -3,14 +3,10 @@ const path = require("path");
 
 const db = require('../database/models/')
 
-
-
 function  userLoggedMiddleware(req,res,next){
     res.locals.isLogged = false
     //console.log("chau middel")
 
-    
-    
     if(req.session && req.session.userLogged){
         res.locals.isLogged = true
         res.locals.user = req.session.userLogged.user_name

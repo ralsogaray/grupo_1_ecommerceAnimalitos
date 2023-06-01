@@ -12,7 +12,7 @@ module.exports = {
     },
     register: async (req, res) => {
         const { id, full_name, user_name, email, date_of_birth, password, userImage, interes, user_type } = req.body;
-    
+        return res.send(req.file)
         try {
           
           const hashedPassword = await bcrypt.hashSync(password, 10);

@@ -6,23 +6,55 @@
         <main>
             <h3 class="titulo">Adicionar Producto</h3>
             <!-- <form method="post" action="/products/create" class="formRegistro" enctype="multipart/form-data"> -->
-            <form method="post" action="/products/create" class="formRegistro">
+            <form method="post" action="/products/create" class="formRegistro" >
+                
                 <label for="name" class="labelForm">Nombre del Producto</label>
-                <input type="text" class="inputRegistro" name="name" id="name" required>
+                <!-- product name validation -->
+                <% if(locals.errors && errors.name){ %>
+                    <div style="color: red;">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
+                <input type="text" class="inputRegistro" name="name" id="name" >
                 
                 <label for="description" class="labelForm">Descripción</label>
-                <input type="text" class="inputRegistro" name="description" id="description" required>
+
+                <!-- product description validation -->
+                    <% if(locals.errors && errors.description){ %>
+                        <div style="color: red;">
+                            <%= errors.description.msg %>
+                        </div>
+                    <% } %>
+                <input type="text" class="inputRegistro" name="description" id="description" >
                 
                 <label for="image" class="labelForm">Foto del Producto</label>
-                <input type="file" class="inputRegistro" name="image" id="product-image" required>
+                    <!-- product image validation -->
+                    <% if(locals.errors && errors.image){ %>
+                        <div style="color: red;">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %>
+                <input type="file" class="inputRegistro" name="image" id="product-image" >
                 
                 <label for="category" class="labelForm">Categoría</label>
-                <input type="radio" name="category" value="dogFood" required>Perro</label>
-                <input type="radio" name="category" value="catFood"required>Gato</label>
+                    <!-- product category validation -->  
+                    <% if(locals.errors && errors.category){ %>
+                        <div style="color: red;">
+                            <%= errors.category.msg %>
+                        </div>
+                    <% } %>
+                <input type="radio" name="category" value="dogFood" >Perro</label>
+                <input type="radio" name="category" value="catFood">Gato</label>
 
 
                 <label for="price" class="labelForm">Precio</label>
-                <input type="text" class="inputRegistro" name="price" id="price" required>
+                    <!-- product price validation -->
+                    <% if(locals.errors && errors.price){ %>
+                        <div style="color: red;">
+                            <%= errors.price.msg %>
+                        </div>
+                    <% } %>
+                <input type="text" class="inputRegistro" name="price" id="price" >
 
                 <div class="buttonContainer">
                     <button type="submit">Agregar</button>

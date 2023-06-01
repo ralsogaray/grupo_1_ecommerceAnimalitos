@@ -6,7 +6,7 @@ function admMiddleware(req, res, next) {
     if(!isUserLogged || (isUserLogged && !isUserAdmin)) {
         // only admin can access /products root path (list of all products)
         // other users are redirected to index
-        console.log(req.path)
+        //console.log(req.path)
         if (["/products", "/products/"].includes(req.path)) {
             return res.redirect('/')
         }

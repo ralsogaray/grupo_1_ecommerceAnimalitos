@@ -33,8 +33,8 @@ const userValidation = {
         check('confirmPass')
             .notEmpty().withMessage('Valide la constraseña').bail()
             .custom((value, { req }) => {
-                console.log(value);
-                console.log(req.body);
+                //console.log(value);
+                //console.log(req.body);
                 if(value === req.body.password){
                 return true
                 }else{
