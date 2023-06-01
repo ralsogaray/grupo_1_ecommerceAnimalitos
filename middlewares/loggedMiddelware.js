@@ -5,7 +5,6 @@ const db = require('../database/models/')
 
 function  userLoggedMiddleware(req,res,next){
     res.locals.isLogged = false
-    //console.log("chau middel")
 
     if(req.session && req.session.userLogged){
         res.locals.isLogged = true
@@ -14,9 +13,6 @@ function  userLoggedMiddleware(req,res,next){
     }
 
     return next()
- 
 
-
-    
 }
 module.exports = userLoggedMiddleware

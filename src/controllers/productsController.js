@@ -49,8 +49,9 @@ module.exports = {
     
     create: async (req, res) =>{
 
-        //return res.send(req.body)
+        
         const resultValidation = validationResult(req) 
+
 
         if(resultValidation.errors.length > 0){
             
@@ -65,7 +66,7 @@ module.exports = {
                 price: req.body.price, 
                 description: req.body.description,
                 category: req.body.category, 
-                image: req.body.image})
+                image: req.file.filename})
             return res.redirect('/products/')
         } catch (error) {
             console.log(error)

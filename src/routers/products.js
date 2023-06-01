@@ -7,17 +7,8 @@ const multer = require('multer');
 const productValidation = require('../validations/productValidation')
 
 const baseRoute = '/products'
-/*
-const storage = multer.diskStorage({
-    destination: function (req,file, cb){
-        cb(null, ("../../public/images"));
-    },
-    filename: function (req, file, cb){
-        const uniqueSuffix = 'product-' + Date.now() + path.extname(file.originalname);
-        cb(null, uniqueSuffix);
-    },
-});*/
 
+// multer configuration
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
     cb(null, path.resolve('public/images')) 
@@ -30,32 +21,19 @@ const storage = multer.diskStorage({
     }
 })
 
-/*
-const storage = multer.diskStorage({
-    destination: function (req, file, cb){
-        cb(null, path.resolve("public/images/"))
-    },
-    filename: function (req, file, cb){
-        const uniqueSuffix = Date.now();
-        const fileExtension = path.extname(file.originalname);
-        const newName = file.originalname.replace(fileExtension, '')
-        cb(null, newName + "-" + uniqueSuffix + fileExtension);
-    },
-});*/
+const upload = multer({storage: storage})  
 
 
 
-
-const upload = multer({storage});
 
 // List products
 router.get(`${baseRoute}/`, productsController.index)
 // New product
 router.get(`${baseRoute}/new`, productsController.new)
-router.post(`${baseRoute}/create`, upload.single('product-image'), productValidation.productCreate ,  productsController.create)
+router.post(`${baseRoute}/create`, upload.single('image'), productValidation.productCreate ,  productsController.create)
 // Edit product
 router.get(`${baseRoute}/edit/:productId`, productsController.edit)
-router.post(`${baseRoute}/update/:productId/`, upload.single('product-image'), /*productValidation.productCreate,*/ productsController.update)
+router.post(`${baseRoute}/update/:productId/`, upload.single('image'), /*productValidation.productCreate,*/ productsController.update)
 // Delete product
 router.post(`${baseRoute}/delete/:productId/`, productsController.delete)
 
