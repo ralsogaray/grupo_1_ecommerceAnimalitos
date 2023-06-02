@@ -24,8 +24,6 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage})  
 
 
-
-
 // List products
 router.get(`${baseRoute}/`, productsController.index)
 // New product
@@ -36,7 +34,6 @@ router.get(`${baseRoute}/edit/:productId`, productsController.edit)
 router.post(`${baseRoute}/update/:productId/`, upload.single('image'), /*productValidation.productCreate,*/ productsController.update)
 // Delete product
 router.post(`${baseRoute}/delete/:productId/`, productsController.delete)
-
 // Product Detail
 router.get(`${baseRoute}/:productId/`, productsController.detail)
 

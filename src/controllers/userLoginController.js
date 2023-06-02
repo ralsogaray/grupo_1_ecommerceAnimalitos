@@ -30,40 +30,33 @@ const processLogin = async (req, res) =>{
         
         const data = req.body
         const userToFind = await db.Users.findOne({where:{email:data.email}})
-        //res.send(userToFind)
         
-        
+        // admin log in
         if(data.password == userToFind.password && data.email == userToFind.email && userToFind.user_type == "admin" ){
             req.session.userLogged = userToFind
             userLogged = req.session.userLogged
             
-            //console.log( data.recordame )
-
             if(data.recordame == "on"){
-                //console.log( data.recordame )
                 res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
                 console.log(req.cookies.userEmail)
             }
-
             return res.redirect("profile")
         }
 
+        // user log in
         if(userToFind){
+            //comparing passwords between the one in de DB and the user trying to log in
             const okForLogging = bcrypt.compareSync(data.password, userToFind.password)
-            //res.send(okForLogging)
+            
 
             if(okForLogging){
                 
                 req.session.userLogged = userToFind
                 userLogged = req.session.userLogged
             
-                //console.log( data.recordame )
-
                 if(data.recordame == "on"){
-                    //console.log( data.recordame )
-                    res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
-                    //console.log(req.cookies.userEmail)
                     
+                    res.cookie('userEmail', data.email, {maxAge: (1000 * 60) * 4})
                 }
                 return res.redirect("profile")
             }
