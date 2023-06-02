@@ -8,31 +8,74 @@
             <form method="post" action="/register" class="formRegistro" enctype="multipart/form-data">
                 <div>
                     <label for="full_name" class="labelForm">Nombre y Apellido</label>
-                    <input type="text" class="inputRegistro" name="full_name" id="full_name" placeholder="Ingresa tu Nombre y Apellido">
+                    <!-- full_name error -->
+                    <% if(locals.errors && errors.full_name){ %>
+                        <div style="color: red;">
+                            <%= errors.full_name.msg %>
+                        </div>
+                    <% } %>
+                    <input type="text" class="inputRegistro" name="full_name" id="full_name" value="<%= locals.oldData ? oldData.full_name : null %>" >
                 </div>
                 <div>
                     <label for="user_name" class="labelForm">Nombre de Usuario</label>
-                    <input type="text" class="inputRegistro" name="user_name" id="user_name" placeholder="Ingresa tu Nombre de Usuario">
+                    <!-- user_name error -->
+                    <% if(locals.errors && errors.user_name){ %>
+                        <div style="color: red;">
+                            <%= errors.user_name.msg %>
+                        </div>
+                    <% } %>
+                    <input type="text" class="inputRegistro" name="user_name" id="user_name" value="<%= locals.oldData ? oldData.user_name : null %>" >
                 </div>
                 <div>
                     <label for="email" class="labelForm">Email</label>
-                    <input type="email" class="inputRegistro" name="email" id="email" placeholder="Ingresa tu Email">
+                    <!-- email error -->
+                    <% if(locals.errors && errors.email){ %>
+                        <div style="color: red;">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <input type="email" class="inputRegistro" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
                 <div>
                     <label for="date_of_birth" class="labelForm">Fecha de Nacimiento</label>
-                    <input type="date" class="inputRegistro" name="date_of_birth" id="date_of_birth">
+                    <!-- date_of_birth error -->
+                    <% if(locals.errors && errors.date_of_birth){ %>
+                        <div style="color: red;">
+                            <%= errors.date_of_birth.msg %>
+                        </div>
+                    <% } %>
+                    <input type="date" class="inputRegistro" name="date_of_birth" id="date_of_birth" >
                 </div>                        
                 <div>
                     <label for="userImage" class="labelForm">Imagen de Perfil</label>
+                    <!-- userImage error -->
+                    <% if(locals.errors && errors.userImage){ %>
+                        <div style="color: red;">
+                            <%= errors.userImage.msg %>
+                        </div>
+                    <% } %>
                     <input type="file" class="inputRegistro" name="userImage" id="image">
                 </div>
                 <div>
                     <label for="password" class="labelForm">Contraseña</label>
-                    <input type="password" class="inputRegistro" name="password" id="password" placeholder="Ingresa tu contraseña">
+                    <!-- password error -->
+                    <% if(locals.errors && errors.password){ %>
+                        <div style="color: red;">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <input type="password" class="inputRegistro" name="password" id="password" >
                 </div>
                 <div>
+                    
                     <label for="confirmPass" class="labelForm">Confirmá tu contraseña</label>
-                    <input type="password" class="inputRegistro" name="confirmPass" id="confirmPass" placeholder="Reingresa tu contraseña">
+                    <!-- confirmPass error -->
+                    <% if(locals.errors && errors.confirmPass){ %>
+                        <div style="color: red;">
+                            <%= errors.confirmPass.msg %>
+                        </div>
+                    <% } %>
+                    <input type="password" class="inputRegistro" name="confirmPass" id="confirmPass" >
                 </div>
                 <div class="buttonContainer">
                     <button type="submit">Registrate</button>

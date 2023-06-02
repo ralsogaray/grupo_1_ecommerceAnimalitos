@@ -2,16 +2,16 @@ const { check, validationResult } = require('express-validator')
 const fs = require('fs')
 const path = require('path')
 const bcrypt = require('bcryptjs')
-const usersFilePath = path.join(__dirname, "../data/users.json");
+//const usersFilePath = path.join(__dirname, "../data/users.json");
 const db = require('../../database/models');
 
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userValidation = {
     registerFormValidations: [
         check('full_name')
             .notEmpty().withMessage('Ingrese su Nombre y Apellido').bail()
-            .isLength({ min: 5, max: 15 }),
+            .isLength({ min: 5, max: 25 }).withMessage('El nombre y apellido debe tener mas de 5 letras y menos de 15.').bail(),
         check('user_name')
             .notEmpty().withMessage('Ingrese un nombre de usuario').bail()
             .isLength({ min: 5, max: 15 }).withMessage('El usuario debe tener mas de cinco letras y menos de 15.').bail(),            
@@ -19,14 +19,14 @@ const userValidation = {
             .notEmpty().withMessage('Ingrese un mail').bail()
             .isEmail().withMessage('Ingrese un mail válido').bail()
             .custom(async value => {
-                let userEmail = await db.Users.findOne({
-                    where: { 'email': value }
-                })
+                let userEmail = await db.Users.findOne({where: { 'email': value }})
                 if (userEmail !== null) {
                     return Promise.reject();
-                  }
+                }
             })
             .withMessage("El email ya se encuentra registrado."),
+        check('date_of_birth')
+            .notEmpty().withMessage('Ingrese fecha de nacimiento') ,
         check('password')
             .notEmpty().withMessage('Ingrese una contraseña').bail()
             .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres').bail(),                       
@@ -36,9 +36,9 @@ const userValidation = {
                 //console.log(value);
                 //console.log(req.body);
                 if(value === req.body.password){
-                return true
+                    return true
                 }else{
-                return false
+                    return false
                 }
             })
             .withMessage('Las contraseñas no coinciden'),

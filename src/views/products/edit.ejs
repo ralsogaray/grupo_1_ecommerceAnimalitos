@@ -6,31 +6,36 @@
         <%- include('../partials/header.ejs') %>
         <main>
             <h3 class="titulo">Modificá un Producto</h3>
-            <form method="POST" action="/products/update/<%= product.id %>" class="formRegistro">
+            <form method="POST" action="/products/update/<%= product.id %>" class="formRegistro" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<%= product.id %>">
                 <div>
                     <label for="name" class="labelForm">Nombre del Producto</label>
-                    <input type="text" class="inputRegistro" name="name" id="name" value="<%= product.name %>" required>
+                    <input type="text" class="inputRegistro" name="name" id="name" value="<%= product.name %>" >
                 </div>
                 <div>
                     <label for="description" class="labelForm">Descripción</label>
-                    <input type="text" class="inputRegistro" name="description" id="description" value="<%= product.description %>" required>
+                    <input type="text" class="inputRegistro" name="description" id="description" value="<%= product.description %>" >
+                </div>
+
+                <div>
+                    <label for="image" class="labelForm">Foto del Producto</label>
+                    <input type="file" class="inputRegistro" name="image" id="product-image" >
                 </div>
                 
                 <div>
                     <label for="category" class="labelForm">Categoría</label>
-                    <input type="text" class="inputRegistro" name="category" id="category" value="<%= product.category %>" required>
+                    <input type="text" class="inputRegistro" name="category" id="category" value="<%= product.category %>" >
                 </div>
     
                 <div>
                     <label for="animal-type" class="labelForm">Tipo de Animal</label>
-                    <label for="animal-type"><input type="radio" name="animal-type" value="Perro" required checked>Perro</label>
-                    <label for="animal-type"><input type="radio" name="animal-type" value="Gato" required>Gato</label>
+                    <label for="animal-type"><input type="radio" name="animal-type" value="Perro"  >Perro</label>
+                    <label for="animal-type"><input type="radio" name="animal-type" value="Gato" >Gato</label>
                 </div>
     
                 <div>
                     <label for="price" class="labelForm">Precio</label>
-                    <input type="text" class="inputRegistro" name="price" id="price" value="<%= product.price %>" required>
+                    <input type="text" class="inputRegistro" name="price" id="price" value="<%= product.price %>" >
                 </div>
     
     

@@ -7,23 +7,26 @@
             <form method="post" action="/login" class="formRegistro">
                 <div class="text-field">
                     <div><h3 class="center">Ingresá a tu Cuenta</h3></div>
+                    <% if(locals.errors && errors.email){ %>
+                        <div style="color: red;">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                     <input type="text" 
                     name="email" 
                     class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null  %>"
                     value="<%= locals.oldData ? oldData.email : null %>">
                     <span></span>
                     <label>Correo Electrónico</label>
+                    
                 </div>
 
-                <% if(locals.errors && errors.email){ %>
-                    <div style="color: red;">
-                        <%= errors.email.msg %>
-                    </div>
-                <% } %>
+                
 
                 
 
                 <div class="text-field">
+                    
                     <input 
                     type="password" 
                     name="password" 
@@ -38,6 +41,7 @@
                     </div>
                     <br>
                 <% } %>
+                
 
                 <div >
                     <input type="checkbox" name="recordame" id="loginRecordame">

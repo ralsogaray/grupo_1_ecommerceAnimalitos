@@ -5,11 +5,11 @@
         <%- include('../partials/header.ejs') %>
         <main>
             <h3 class="titulo">Adicionar Producto</h3>
-            <!-- <form method="post" action="/products/create" class="formRegistro" enctype="multipart/form-data"> -->
+            
             <form method="post" action="/products/create" class="formRegistro" enctype="multipart/form-data" >
                 
                 <label for="name" class="labelForm">Nombre del Producto</label>
-                <!-- product name validation -->
+                <!-- product name error -->
                 <% if(locals.errors && errors.name){ %>
                     <div style="color: red;">
                         <%= errors.name.msg %>
@@ -19,7 +19,7 @@
                 
                 <label for="description" class="labelForm">Descripción</label>
 
-                <!-- product description validation -->
+                <!-- product description error -->
                     <% if(locals.errors && errors.description){ %>
                         <div style="color: red;">
                             <%= errors.description.msg %>
@@ -28,7 +28,7 @@
                 <input type="text" class="inputRegistro" name="description" id="description" value="<%= locals.oldData ? oldData.description : null %>">
                 
                 <label for="image" class="labelForm">Foto del Producto</label>
-                    <!-- product image validation -->
+                    <!-- product image error -->
                     <% if(locals.errors && errors.image){ %>
                         <div style="color: red;">
                             <%= errors.image.msg %>
@@ -37,7 +37,7 @@
                 <input type="file" class="inputRegistro" name="image" id="product-image" >
                 
                 <label for="category" class="labelForm">Categoría</label>
-                    <!-- product category validation -->  
+                    <!-- product category error -->  
                     <% if(locals.errors && errors.category){ %>
                         <div style="color: red;">
                             <%= errors.category.msg %>
@@ -48,7 +48,7 @@
 
 
                 <label for="price" class="labelForm">Precio</label>
-                    <!-- product price validation -->
+                    <!-- product price error -->
                     <% if(locals.errors && errors.price){ %>
                         <div style="color: red;">
                             <%= errors.price.msg %>

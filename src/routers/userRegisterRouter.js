@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.get("/register", guestMiddleware, userRegisterController.renderRegister);
-router.post("/register", upload.single('userImage') , /*userValidation.registerFormValidations,*/ userRegisterController.register);
+router.post("/register", upload.single('userImage') , userValidation.registerFormValidations, userRegisterController.register);
 
 
 

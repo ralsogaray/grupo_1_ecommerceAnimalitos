@@ -2,8 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcrypt');
 const db = require('../../database/models/');
-const usersFilePath = path.join(__dirname, "../data/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const usersFilePath = path.join(__dirname, "../data/users.json")
+const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
+
+const {validationResult } = require("express-validator")
 
 module.exports = {
     renderRegister: (req,res) => {
@@ -12,7 +14,15 @@ module.exports = {
     },
     register: async (req, res) => {
         
-        
+        const resultValidation = validationResult(req)
+
+        if(resultValidation.errors.length > 0){
+          return res.render("users/register.ejs", {
+              errors: resultValidation.mapped(),
+              oldData: req.body
+          })}
+
+
         try {
           
           const hashedPassword = await bcrypt.hashSync(req.body.password, 10);
