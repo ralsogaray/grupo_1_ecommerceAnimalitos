@@ -1,7 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-const dataFile = require('../data/dataFile.js')
-const productsFilePath = path.join(__dirname, "../data/products.json");
+//const fs = require("fs");
+//const path = require("path");
+//const dataFile = require('../data/dataFile.js')
+//const productsFilePath = path.join(__dirname, "../data/products.json");
 const db = require('../../database/models/');
 const {validationResult } = require("express-validator")
 
@@ -77,40 +77,46 @@ module.exports = {
 
     edit: async (req, res) => {
 
+
         try {
             const product = await db.Products.findByPk(req.params.productId)
-            //res.send(product)
 
             if(!product){
                 return res.redirect('/products/')
             }
-            res.render('products/edit', { product: product })
+            return res.render('products/edit', { product: product })
         } catch (error) {
             res.send(error)
         }
-        
-    
     },
 
     update: async (req, res) => {
-        
+        /*
+        const resultValidation = validationResult(req) 
+
+        if(resultValidation.errors.length > 0){
+            return res.render("products/edit.ejs", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })}
+        */
         try{
             await db.Products.update({
                 name: req.body.name, 
                 price: req.body.price, 
                 description: req.body.description,
                 category: req.body.category, 
-                image: req.body.image},
+                image: req.file.filename},
                     {where: {
                         id: req.params.productId
                     }}
                 )
 
         } catch(error){
-            res.send(error)
+            return res.send(error)
         }
-        
-        return res.redirect('/products/')
+                            
+        return res.redirect(`/products/${req.params.productId}`)
     },
 
     delete: async (req, res) =>{

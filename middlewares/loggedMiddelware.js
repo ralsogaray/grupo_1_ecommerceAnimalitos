@@ -1,7 +1,4 @@
-const fs = require("fs");
-const path = require("path");
 
-const db = require('../database/models/')
 
 function  userLoggedMiddleware(req,res,next){
     res.locals.isLogged = false
