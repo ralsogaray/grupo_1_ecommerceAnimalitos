@@ -91,7 +91,27 @@ const logOut = (req, res) =>{
 
 }
 
+const destroyUser = async (req, res) => {
+    
+    try {
+        const userToFind = await db.Users.findOne({where:{email:userLogged.email}})
+        //return res.send(userToFind.email)
+        await db.Users.destroy({
+            where:{
+                id: userToFind.id
+            }
+        })
+        req.session.destroy()
+        return res.redirect('/login/')
+
+    } catch (error) {
+        return res.send(error)
+    }
+    
+    
+}
 
 
 
-module.exports = {renderLogin, processLogin, renderProfile, logOut};
+
+module.exports = {renderLogin, processLogin, renderProfile, logOut, destroyUser};

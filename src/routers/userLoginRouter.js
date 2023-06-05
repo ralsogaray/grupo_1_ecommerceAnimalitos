@@ -17,5 +17,7 @@ router.get('/profile', userLoginMiddleware,  userLoginController.renderProfile)
 
 router.get('/logout', userLoginController.logOut)
 
+router.post('/destroy', userLoginController.destroyUser)
+
 
 module.exports = router;

@@ -13,8 +13,16 @@
                 <div style="width: 100%; ">
                     <img style="width: 50%; border-radius: 20%;" src="/images/users/<%= userLogged.userImage %> %>" alt="userLogged.userImage">
                 </div>
+
+                <form method="post" action="/destroy">
+                    <button type="submit">
+                        <i class="fa-solid fa-trash"></i>
+                        Borrar Perfil
+                    </button>
+                </form>
                 
             </div>
+
         </main>
         <%- include('../partials/footer.ejs') %>
     </body>
