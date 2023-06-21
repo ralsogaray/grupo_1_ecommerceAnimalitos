@@ -28,7 +28,15 @@
                                     <button class="counter-btn increment">+</button>
                                 </div>
                                 <p class="sm-price">$<%= product.price %></p>
-                                <button class="sm-delete-btn"><img src="/images/close.png" alt="delete button"></button>
+
+
+                                <form method="post" action="/deleteProductDb/<%= product.id %>">
+                                    
+                                    <button class="sm-delete-btn" type="submit">
+                                        <img src="/images/close.png" alt="delete button">
+                                    </button>
+            
+                                </form>
                             </div>
 
 

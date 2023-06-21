@@ -1,11 +1,11 @@
 
 const db = require('../../database/models/');
 
-
+// show cart 
 const renderCart = async (req,res) => {
 
     const products = await db.Carts.findAll({where:{user_email:userLogged.email}})
-    //return res.send(product)
+    
     return res.render('users/cart.ejs', { products })
 
 }
@@ -34,8 +34,25 @@ const addProduct = async (req, res) => {
     }
 }
 
+// delete product from cart DB
 const deleteProduct = async (req, res) =>{
-    res.send("eliminar producto!")
+    
+    
+    const productToDestroy = await db.Carts.findOne({where:{id:req.params.id}})
+    
+    try {
+        
+        await db.Carts.destroy({
+            where:{
+                id: productToDestroy.id
+            }
+        })
+        
+        return res.redirect('/cart/')
+
+    } catch (error) {
+        return res.send(error)
+    }
 }
 
 module.exports = {renderCart, addProduct, deleteProduct};

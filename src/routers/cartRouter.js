@@ -7,11 +7,14 @@ const cartController = require('../controllers/cartController');
 
 const userLoginMiddleware =  require ("../../middlewares/authMiddelware")
 
-
+//show cart 
 router.get('/cart', userLoginMiddleware , cartController.renderCart)
 
+// add product to DB
 router.post('/cart/addProduct', cartController.addProduct)
 
+//delete product
+router.post('/deleteProductDb/:id', cartController.deleteProduct)
 
 
 
