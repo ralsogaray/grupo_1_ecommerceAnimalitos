@@ -9,7 +9,6 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
-        //console.log(file)
         cb(null, path.resolve("public/images/users/"))
     },
     filename: function (req, file, cb){
@@ -22,10 +21,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// render register.ejs
 router.get("/register", guestMiddleware, userRegisterController.renderRegister);
+
+// user registration
 router.post("/register", upload.single('userImage') , userValidation.registerFormValidations, userRegisterController.register);
 
-//agregar destroy usuario. 
+
 
 module.exports = router;
 

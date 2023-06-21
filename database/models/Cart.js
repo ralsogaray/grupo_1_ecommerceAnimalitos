@@ -3,7 +3,7 @@ const {sequelize, dataTypes} = require('sequelize')
 module.exports = (sequelize, dataTypes) => {
     //const alias = "Products" //nombre de la tabla en plural
 
-    const Products = sequelize.define('Products', {
+    const Carts = sequelize.define('Carts', {
         
         name: {
             type: dataTypes.STRING,
@@ -24,12 +24,14 @@ module.exports = (sequelize, dataTypes) => {
         image:{
             type: dataTypes.STRING,
             allowNull: false
+        },
+        user_email:{
+            type: dataTypes.STRING,
+            allowNull: false
         }
     },
      {timestamps: false}
     )
 
-    return Products
-
-    
+    return Carts
 }

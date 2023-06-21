@@ -35,6 +35,16 @@
                                     </button>
                                 </div>                        
                                 <div class="add-chart">
+
+
+                                    <form action="/cart/addProduct/" method="POST" class="product_quantity">
+                                        <input type="hidden"  name="productId" value="<%= product.id%>">
+
+                                        <button type="submit">Agregar al carrito</button>
+                                    </form>
+
+
+
                                     <a href="../cart">
                                         <button type="submit">
                                             <i class="fa-sharp fa-solid fa-cart-plus"></i>
@@ -84,21 +94,28 @@
                                     alt="logo fb"></a>
                             <p>Facebook</p>
                         </div>
-                        <div class="modify-chart">
-                            <a href="/products/edit/<%= product.id %>/" >
-                                <button>
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                    Editar Producto
-                                </button>
-                            </a>
-                            
-                            <form method="post" action="/products/delete/<%= product.id %>">
-                                <button type="submit">
-                                    <i class="fa-solid fa-trash"></i>
-                                    Borrar Producto
-                                </button>
-                            </form>
-                        </div>
+
+
+
+
+                        <% if(locals.userIsAdmin) { %>
+                            <div class="modify-chart">
+                                <a href="/products/edit/<%= product.id %>/" >
+                                    <button>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                        Editar Producto
+                                    </button>
+                                </a>
+                                
+                                <form method="post" action="/products/delete/<%= product.id %>">
+                                    <button type="submit">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Borrar Producto
+                                    </button>
+                                </form>
+                            </div>
+                        <% } %>
+                        
                     </article>
                 </div>            
             </section>

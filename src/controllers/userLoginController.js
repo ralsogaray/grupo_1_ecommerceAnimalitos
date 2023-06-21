@@ -1,9 +1,9 @@
-const fs = require("fs");
-const path = require("path");
+//const fs = require("fs");
+//const path = require("path");
 const bcrypt = require('bcrypt')
 const {validationResult } = require("express-validator")
 
-const usersFilePath = path.join(__dirname, "../data/users.json");
+//const usersFilePath = path.join(__dirname, "../data/users.json");
 //const users = JSON.parse(fs.readFileSync(usersFilePath, {encoding: 'utf-8'}))
 
 const db = require('../../database/models/');
@@ -72,7 +72,7 @@ const processLogin = async (req, res) =>{
 
     } catch(error){
         console.log(error)
-        res.render('algo salió mal')
+        res.send('algo salió mal')
     }
     
 

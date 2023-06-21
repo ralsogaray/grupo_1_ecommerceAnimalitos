@@ -70,6 +70,22 @@ INSERT INTO products (id, name, price, description, category, image) VALUES
 
 
 
+-- -----------------------------------------------------
+-- Table `AnimalitosDB`.`cart`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `AnimalitosDB`.`carts`(
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `description` VARCHAR(250) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
+  `image` VARCHAR(45) NULL,
+  `user_email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

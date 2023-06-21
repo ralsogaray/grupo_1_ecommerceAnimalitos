@@ -10,5 +10,8 @@ const userLoginMiddleware =  require ("../../middlewares/authMiddelware")
 
 router.get('/cart', userLoginMiddleware , cartController.renderCart)
 
+router.post('/cart/addProduct', cartController.addProduct)
+
+
 
 module.exports = router;
