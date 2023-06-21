@@ -8,55 +8,36 @@
                 <p class="section-heading">Tu Carrito</p>
                 <div class="cart">
                     <!--cart product here-->
-                    <div class="sm-product">
-                        <img src="images/AlimentoAdulto.png" class="sm-product-img" alt="">
-                        <div class="sm-text">
-                            <p class="sm-product-name">MARCA</p>
-                            <p class="sm-des">Descripcion del producto</p>
-                        </div>
-                        <div class="item-counter">
-                            <button class="counter-btn decrement">-</button>
-                            <p class="item-count">1</p>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <p class="sm-price">$2000</p>
-                        <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
-                    </div>
 
-                    <div class="sm-product">
-                        <img src="images/AlimentoCachorro.png" class="sm-product-img" alt="">
-                        <div class="sm-text">
-                            <p class="sm-product-name">MARCA</p>
-                            <p class="sm-des">Descripcion del producto</p>
-                        </div>
-                        <div class="item-counter">
-                            <button class="counter-btn decrement">-</button>
-                            <p class="item-count">1</p>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <p class="sm-price">$2700</p>
-                        <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
-                    </div>
+                    <% if(!products) { %>
+                        <h2>No hay productos en el carrito!</h2>
+                        <button class="boton-filtrar-productos">Filtrar</button>    
+                    <% } else { %>
+                        
+                        <% products.forEach(product=> {%>
 
+                            <div class="sm-product">
+                                <img src="/images/<%= product.image %>" class="sm-product-img" alt="<%= product.description%>">
+                                <div class="sm-text">
+                                    <p class="sm-product-name"><%= product.name %></p>
+                                    
+                                </div>
+                                <div class="item-counter">
+                                    <button class="counter-btn decrement">-</button>
+                                    <p class="item-count">1</p>
+                                    <button class="counter-btn increment">+</button>
+                                </div>
+                                <p class="sm-price">$<%= product.price %></p>
+                                <button class="sm-delete-btn"><img src="/images/close.png" alt="delete button"></button>
+                            </div>
+
+
+
+                        <% }) %>    
+                    <% } %>   
+                
                 </div>
-                <p class="section-heading">Los clientes que adquirieron este producto también compraron:</p>
-                <div class="sugerencias">
-                    <!--sugerencias cart product here-->
-                    <div class="sm-product">
-                        <img src="images/AlimentoSenior.png" class="sm-product-img" alt="">
-                        <div class="sm-text">
-                            <p class="sm-product-name">MARCA</p>
-                            <p class="sm-des">Descripcion del producto</p>
-                        </div>
-                        <div class="item-counter">
-                            <button class="counter-btn decrement">-</button>
-                            <p class="item-count">1</p>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <p class="sm-price">$2500</p>
-                        <button class="sm-delete-btn"><img src="images/close.png" alt=""></button>
-                    </div>
-                </div>
+                
             </div>
             <div class="checkout-section">
                 <div class="checkout-box">

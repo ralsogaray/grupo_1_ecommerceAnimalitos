@@ -2,21 +2,22 @@
 const db = require('../../database/models/');
 
 
-const renderCart = (req,res) => {
-    return res.render('users/cart.ejs')
+const renderCart = async (req,res) => {
+
+    const products = await db.Carts.findAll({where:{user_email:userLogged.email}})
+    //return res.send(product)
+    return res.render('users/cart.ejs', { products })
 
 }
 
+// add product to DB
 const addProduct = async (req, res) => {
-    //return res.send(req.body)
-    const usuario = userLogged.email
-    //res.send(usuario)
-    const productToBuy = await db.Products.findOne({where:{id:req.body.productId}})
-    try {
-        //const userBuyer = await db.Users.findOne({where:{email:userLogged.email}})
-        
     
-       // return res.send(productToBuy)
+    const usuario = userLogged.email
+    const productToBuy = await db.Products.findOne({where:{id:req.body.productId}})
+    
+    try {
+        
         await db.Carts.create({
             name: productToBuy.name, 
             price: productToBuy.price, 
@@ -27,16 +28,14 @@ const addProduct = async (req, res) => {
         })
         return res.redirect('/cart/')
 
-       
-       // const userBuyer_id = userBuyer.id
-       
     } catch (error) {
         res.send('no funciona')
         console.log(error)
-
     }
 }
 
+const deleteProduct = async (req, res) =>{
+    res.send("eliminar producto!")
+}
 
-
-module.exports = {renderCart, addProduct};
+module.exports = {renderCart, addProduct, deleteProduct};
