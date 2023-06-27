@@ -3,17 +3,19 @@ const app = express();
 const APP_PORT = process.env.PORT || 3333;
 const path = require('path');
 const publicFolderPath = path.resolve('public');
-const methodOverride = require('method-override');
+const methodOverride = require('method-override'); //for using update n' delete
 
-/// Sprint 5
+
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
-// sprint 5
+
 app.use(cookieParser())
+
+//session 
 app.use(session({
     secret: 'secret word'
 }))
@@ -24,8 +26,6 @@ const adminMiddleware = require('./middlewares/adminMiddleware')
 app.use(loggedMiddelware)
 app.use(adminMiddleware)
 
-
-// sprint 6
 
 
 //routes required

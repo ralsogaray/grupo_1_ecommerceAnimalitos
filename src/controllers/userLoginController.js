@@ -8,12 +8,13 @@ const {validationResult } = require("express-validator")
 
 const db = require('../../database/models/');
 
-
+// show login view
 const renderLogin = async (req,res) => {
     
     return res.render('users/login.ejs')
 }
 
+// process user login
 const processLogin = async (req, res) =>{
 
     const resultValidation = validationResult(req) 
@@ -77,13 +78,14 @@ const processLogin = async (req, res) =>{
     
 
 }
-
+// render user profile
 const renderProfile = async (req, res) =>{
     
     //console.log(req.cookies.userEmail)
     res.render('users/profile.ejs')
 }
 
+// user logout
 const logOut = (req, res) =>{
     //res.clearCookie('userEmail') 
     req.session.destroy()
@@ -91,11 +93,10 @@ const logOut = (req, res) =>{
 
 }
 
+//destroy user from DB
 const destroyUser = async (req, res) => {
-    
     try {
         const userToFind = await db.Users.findOne({where:{email:userLogged.email}})
-        //return res.send(userToFind.email)
         await db.Users.destroy({
             where:{
                 id: userToFind.id
@@ -111,7 +112,9 @@ const destroyUser = async (req, res) => {
     
 }
 
-
-
-
-module.exports = {renderLogin, processLogin, renderProfile, logOut, destroyUser};
+module.exports =    {renderLogin, 
+                    processLogin, 
+                    renderProfile, 
+                    logOut, 
+                    destroyUser
+                    };

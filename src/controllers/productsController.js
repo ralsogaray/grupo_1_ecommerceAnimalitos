@@ -1,14 +1,12 @@
-//const fs = require("fs");
-//const path = require("path");
-//const dataFile = require('../data/dataFile.js')
+
 //const productsFilePath = path.join(__dirname, "../data/products.json");
 const db = require('../../database/models/');
-const {validationResult } = require("express-validator")
+const { validationResult } = require("express-validator")
 
-
-//const productsDF = dataFile(productsFilePath)
 
 module.exports = {
+
+    //show all products
     index: async (req, res) => {
         
         
@@ -23,13 +21,13 @@ module.exports = {
     
     },
 
+    // show one product on detail
     detail: async (req, res) => {
-        
         
         try {
             const productToFind = req.params.productId
             const product = await db.Products.findOne({where:{id:productToFind}})
-            //console.log(product.name)
+            
             if(!product) {
                 return res.send('No existe ese producto')
             }
@@ -43,10 +41,12 @@ module.exports = {
         
     },
 
+    // new product form
     new: (req, res) => {
         return res.render('products/new')
     },
     
+    // create product on DB
     create: async (req, res) =>{
 
         const resultValidation = validationResult(req) 
@@ -67,17 +67,13 @@ module.exports = {
             return res.redirect('/products/')
         } catch (error) {
             console.log(error)
-            res.send(error)
+            return res.send(error)
         }
-        //productsDF.create(params)
-        
-        
         
     },
 
+    // edit product view with db
     edit: async (req, res) => {
-
-
         try {
             const product = await db.Products.findByPk(req.params.productId)
 
@@ -89,7 +85,7 @@ module.exports = {
             res.send(error)
         }
     },
-
+    // update product on DB
     update: async (req, res) => {
         /*
         const resultValidation = validationResult(req) 
@@ -118,7 +114,8 @@ module.exports = {
                             
         return res.redirect(`/products/${req.params.productId}`)
     },
-
+    
+    // delete product on DB
     delete: async (req, res) =>{
         
         try {

@@ -8,10 +8,14 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
 const {validationResult } = require("express-validator")
 
 module.exports = {
+
+    // render register view
     renderRegister: (req,res) => {
         return res.render('users/register.ejs')
     
     },
+
+    // user register process 
     register: async (req, res) => {
         
         const resultValidation = validationResult(req)
@@ -40,6 +44,7 @@ module.exports = {
           });
     
           return res.render('users/login.ejs')
+          
         } catch (error) {
           console.log(error)
           return res.send(error);

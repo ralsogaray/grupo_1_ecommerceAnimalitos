@@ -5,8 +5,17 @@ const db = require('../../database/models/');
 const renderCart = async (req,res) => {
 
     const products = await db.Carts.findAll({where:{user_email:userLogged.email}})
+
+    let sumaProductos = 0
+    if(products){
+        
+        products.forEach(producto => {
+            sumaProductos = sumaProductos + producto.price
+        });
+    //console.log(sumaProductos)
+    }
     
-    return res.render('users/cart.ejs', { products })
+    return res.render('users/cart.ejs', { products, sumaProductos })
 
 }
 
