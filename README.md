@@ -26,8 +26,8 @@ profesión: Licenciado en administración de empresas
 
 - Integrante V:
 nombre: Rodrigo Luis Alsogaray
-edad: 30
-profesión: Abogado, Pastelero y Crypto enthusiastic
+edad: 31
+profesión: Abogado Penalista, Repostero y DJ
 
 # SITIOS DE REFERENCIA
 
