@@ -1,52 +1,50 @@
 # TEMÁTICA
-- Descripción: E-commerce destinado a la compra de alimento y accesorios para perros y gatos domésticos. Asimismo, se ofrecerá servicios de guardería, peluquería y de paseadores para dichos animales.
-- Público: Toda persona que desee adquirir un producto o servicio ofrecido para sí o para terceros relacionado a perros y gatos domésticos. 
+- Description: E-commerce for the purchase of food for domestic dogs and cats. Web developed with soft colors that we believe gives security and peace to customers, creating an interface that is not too loaded with elements so as not to overwhelm potential customers.
+- Target: Every person that wants to purchase food por their dog or cat. 
 
-# INTEGRANTES DEL EQUIPO DE DESARROLLO
 
-- Integrante I
-nombre: Verónica Tarulla
-edad: 31
-profesión: Licenciada en Gestión Hotelera
+# DEVELOPERS
 
-- Integrante II
-nombre: Gastón Cantero
-edad: 25
-profesión: Profesor de inglés
+- I
+name: Rodrigo Luis Alsogaray
+age: 31
 
-- Integrante III
-nombre: Lucas Tolino
-edad: 33
-profesión: Médico
+- II
+name: Gastón Cantero
+age: 25
 
-- Integrante IV
-nombre: Patricio Solari
-edad: 33
-profesión: Licenciado en administración de empresas
+- III
+name: Lucas Tolino
+age: 33
 
-- Integrante V:
-nombre: Rodrigo Luis Alsogaray
-edad: 31
-profesión: Abogado Penalista, Repostero y DJ
+- IV
+name: Patricio Solari
+age: 33
 
-# SITIOS DE REFERENCIA
+- V
+name: Verónica Tarulla
+age: 31
 
-- Se seleccionaron los sitios abajo mencionados debido a que presentan productos y servicios similares a los que se enfoca nuestro E-commerce, además por la funcionalidad y estética en la cual nos inspiramos para la realización de nuestros wireframes.
+
+# INSPIRATIONAL WEBSITES
+
+- The sites mentioned below were selected because they present products and services similar to those that our E-commerce focuses on, in addition to the functionality and aesthetics in which we are inspired to make our wireframes.
 
 - https://www.petitpetshop.com.ar/
 - https://www.puppis.com.ar/
 - https://petfood.com.ar
-- https://mispichos.com/#navbar
+- https://mispichos.com/
 - https://www.natural-life.com.ar/
 
-# PLATAFORMA PARA ORGANIZAR EL TRABAJO EN EQUIPO
+
+# TRELLO FOR DIVIDING TASKS USING AGILE METHODOLOGIES (SCRUM)
 - https://trello.com/w/animalitosdg
 
 
-# Arrancando el servidor en localhost
+# INITIALIZING SERVER  AT LOCALHOST
 
 ```terminal
 $ npm start
 ```
 
-Ir a [http://localhost:3333](http://localhost:3333)
+Go to [http://localhost:3333](http://localhost:3333)
